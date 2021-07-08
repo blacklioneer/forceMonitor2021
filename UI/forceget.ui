@@ -1,0 +1,1112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ForceGet</class>
+ <widget class="QDialog" name="ForceGet">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1472</width>
+    <height>736</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+background-color: #002140;</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="QWidget" name="widget_5" native="true">
+     <property name="styleSheet">
+      <string notr="true">border-radius:6px;
+border-width:2px;
+border-style:solid;
+border-color:white;
+background-color:#314659;
+color:white;
+</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_5" stretch="5,1,5,1">
+      <item>
+       <widget class="QChartView" name="widget_Chart_Coordinate" native="true">
+        <property name="styleSheet">
+         <string notr="true">background-color:#434e59;</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_28">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <spacer name="horizontalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>508</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QWidget" name="widget_12" native="true">
+           <property name="font">
+            <font>
+             <family>Times New Roman</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_6">
+            <item>
+             <widget class="QCheckBox" name="checkBox_X">
+              <property name="font">
+               <font>
+                <family>Times New Roman</family>
+                <pointsize>-1</pointsize>
+                <weight>75</weight>
+                <italic>true</italic>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">border:none;
+font:bold italic  &quot;Times New Roman&quot;;
+font-size:16px; 
+border-width:0px;
+</string>
+              </property>
+              <property name="text">
+               <string>X</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkBox_Y">
+              <property name="font">
+               <font>
+                <family>Times New Roman</family>
+                <pointsize>-1</pointsize>
+                <weight>75</weight>
+                <italic>true</italic>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="tabletTracking">
+               <bool>false</bool>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">border:none;
+font:bold italic  &quot;Times New Roman&quot;;
+font-size:16px; 
+border-width:0px;
+</string>
+              </property>
+              <property name="text">
+               <string>Y</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+              <property name="tristate">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkBox_Z">
+              <property name="font">
+               <font>
+                <family>Times New Roman</family>
+                <pointsize>-1</pointsize>
+                <weight>75</weight>
+                <italic>true</italic>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">border:none;
+font:bold italic  &quot;Times New Roman&quot;;
+font-size:16px; 
+border-width:0px;
+</string>
+              </property>
+              <property name="text">
+               <string>Z</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="widget_29" native="true">
+        <property name="styleSheet">
+         <string notr="true">border:none;</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_29">
+         <property name="spacing">
+          <number>24</number>
+         </property>
+         <item>
+          <widget class="QWidget" name="widget_13" native="true">
+           <property name="styleSheet">
+            <string notr="true">border-radius:6px;
+border-width:2px;
+border-style:solid;
+border-color:white;
+background-color:#434e59;</string>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_7">
+            <item>
+             <widget class="QLabel" name="label_2">
+              <property name="styleSheet">
+               <string notr="true">border:none;
+font:bold italic  &quot;Times New Roman&quot;;
+font-size:16px; 
+border-width:0px;
+</string>
+              </property>
+              <property name="text">
+               <string>X:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLCDNumber" name="lcdNumber_X">
+              <property name="font">
+               <font>
+                <pointsize>16</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="smallDecimalPoint">
+               <bool>true</bool>
+              </property>
+              <property name="digitCount">
+               <number>10</number>
+              </property>
+              <property name="segmentStyle">
+               <enum>QLCDNumber::Flat</enum>
+              </property>
+              <property name="value" stdset="0">
+               <double>20.000000000000000</double>
+              </property>
+              <property name="intValue" stdset="0">
+               <number>20</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_33">
+              <property name="styleSheet">
+               <string notr="true">border:none;
+font:bold italic  &quot;Times New Roman&quot;;
+font-size:16px; 
+border-width:0px;
+</string>
+              </property>
+              <property name="text">
+               <string>N（±200）</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QWidget" name="widget_15" native="true">
+           <property name="styleSheet">
+            <string notr="true">border-radius:6px;
+border-width:2px;
+border-style:solid;
+border-color:white;
+background-color:#434e59;</string>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_13">
+            <item>
+             <widget class="QLabel" name="label_15">
+              <property name="styleSheet">
+               <string notr="true">border:none;
+font:bold italic  &quot;Times New Roman&quot;;
+font-size:16px; 
+border-width:0px;
+</string>
+              </property>
+              <property name="text">
+               <string>Y:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLCDNumber" name="lcdNumber_Y">
+              <property name="font">
+               <font>
+                <pointsize>16</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="smallDecimalPoint">
+               <bool>true</bool>
+              </property>
+              <property name="digitCount">
+               <number>10</number>
+              </property>
+              <property name="segmentStyle">
+               <enum>QLCDNumber::Flat</enum>
+              </property>
+              <property name="value" stdset="0">
+               <double>20.000000000000000</double>
+              </property>
+              <property name="intValue" stdset="0">
+               <number>20</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_34">
+              <property name="styleSheet">
+               <string notr="true">border:none;
+font:bold italic  &quot;Times New Roman&quot;;
+font-size:16px; 
+border-width:0px;
+</string>
+              </property>
+              <property name="text">
+               <string>N（±200）</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QWidget" name="widget_16" native="true">
+           <property name="styleSheet">
+            <string notr="true">border-radius:6px;
+border-width:2px;
+border-style:solid;
+border-color:white;
+background-color:#434e59;</string>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_14">
+            <item>
+             <widget class="QLabel" name="label_35">
+              <property name="styleSheet">
+               <string notr="true">border:none;
+font:bold italic  &quot;Times New Roman&quot;;
+font-size:16px; 
+border-width:0px;
+</string>
+              </property>
+              <property name="text">
+               <string>Z:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLCDNumber" name="lcdNumber_Z">
+              <property name="font">
+               <font>
+                <pointsize>16</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="smallDecimalPoint">
+               <bool>true</bool>
+              </property>
+              <property name="digitCount">
+               <number>10</number>
+              </property>
+              <property name="segmentStyle">
+               <enum>QLCDNumber::Flat</enum>
+              </property>
+              <property name="value" stdset="0">
+               <double>20.000000000000000</double>
+              </property>
+              <property name="intValue" stdset="0">
+               <number>20</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_36">
+              <property name="styleSheet">
+               <string notr="true">border:none;
+font:bold italic  &quot;Times New Roman&quot;;
+font-size:16px; 
+border-width:0px;
+</string>
+              </property>
+              <property name="text">
+               <string>N（±400）</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QChartView" name="widget_Chart_Angle" native="true">
+        <property name="styleSheet">
+         <string notr="true">background-color:#434e59;</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_8">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <spacer name="horizontalSpacer_4">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>495</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QWidget" name="widget_4" native="true">
+           <property name="font">
+            <font>
+             <family>Times New Roman</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_7">
+            <item>
+             <widget class="QCheckBox" name="checkBox_A">
+              <property name="styleSheet">
+               <string notr="true">border:none;
+font:bold italic  &quot;Times New Roman&quot;;
+font-size:16px; 
+border-width:0px;
+</string>
+              </property>
+              <property name="text">
+               <string>A</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkBox_B">
+              <property name="styleSheet">
+               <string notr="true">border:none;
+font:bold italic  &quot;Times New Roman&quot;;
+font-size:16px; 
+border-width:0px;
+</string>
+              </property>
+              <property name="text">
+               <string>B</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkBox_C">
+              <property name="styleSheet">
+               <string notr="true">border:none;
+font:bold italic  &quot;Times New Roman&quot;;
+font-size:16px; 
+border-width:0px;
+</string>
+              </property>
+              <property name="text">
+               <string>C</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="widget_33" native="true">
+        <property name="styleSheet">
+         <string notr="true">border:none;</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_30">
+         <property name="spacing">
+          <number>24</number>
+         </property>
+         <item>
+          <widget class="QWidget" name="widget_34" native="true">
+           <property name="styleSheet">
+            <string notr="true">border-radius:6px;
+border-width:2px;
+border-style:solid;
+border-color:white;
+background-color:#434e59;</string>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_31">
+            <item>
+             <widget class="QLabel" name="label_37">
+              <property name="styleSheet">
+               <string notr="true">border:none;
+font:bold italic  &quot;Times New Roman&quot;;
+font-size:16px; 
+border-width:0px;
+</string>
+              </property>
+              <property name="text">
+               <string>A:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLCDNumber" name="lcdNumber_MX">
+              <property name="font">
+               <font>
+                <pointsize>16</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="smallDecimalPoint">
+               <bool>true</bool>
+              </property>
+              <property name="digitCount">
+               <number>9</number>
+              </property>
+              <property name="segmentStyle">
+               <enum>QLCDNumber::Flat</enum>
+              </property>
+              <property name="value" stdset="0">
+               <double>20.000000000000000</double>
+              </property>
+              <property name="intValue" stdset="0">
+               <number>20</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_38">
+              <property name="styleSheet">
+               <string notr="true">border:none;
+font:bold italic  &quot;Times New Roman&quot;;
+font-size:16px; 
+border-width:0px;
+</string>
+              </property>
+              <property name="text">
+               <string>N/m（±20）</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QWidget" name="widget_35" native="true">
+           <property name="styleSheet">
+            <string notr="true">border-radius:6px;
+border-width:2px;
+border-style:solid;
+border-color:white;
+background-color:#434e59;</string>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_32">
+            <item>
+             <widget class="QLabel" name="label_39">
+              <property name="styleSheet">
+               <string notr="true">border:none;
+font:bold italic  &quot;Times New Roman&quot;;
+font-size:16px; 
+border-width:0px;
+</string>
+              </property>
+              <property name="text">
+               <string>B:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLCDNumber" name="lcdNumber_MY">
+              <property name="font">
+               <font>
+                <pointsize>16</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="smallDecimalPoint">
+               <bool>true</bool>
+              </property>
+              <property name="digitCount">
+               <number>9</number>
+              </property>
+              <property name="segmentStyle">
+               <enum>QLCDNumber::Flat</enum>
+              </property>
+              <property name="value" stdset="0">
+               <double>20.000000000000000</double>
+              </property>
+              <property name="intValue" stdset="0">
+               <number>20</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_40">
+              <property name="styleSheet">
+               <string notr="true">border:none;
+font:bold italic  &quot;Times New Roman&quot;;
+font-size:16px; 
+border-width:0px;
+</string>
+              </property>
+              <property name="text">
+               <string>N/m（±20）</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QWidget" name="widget_36" native="true">
+           <property name="styleSheet">
+            <string notr="true">border-radius:6px;
+border-width:2px;
+border-style:solid;
+border-color:white;
+background-color:#434e59;</string>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_33">
+            <item>
+             <widget class="QLabel" name="label_41">
+              <property name="styleSheet">
+               <string notr="true">border:none;
+font:bold italic  &quot;Times New Roman&quot;;
+font-size:16px; 
+border-width:0px;
+</string>
+              </property>
+              <property name="text">
+               <string>C:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLCDNumber" name="lcdNumber_MZ">
+              <property name="font">
+               <font>
+                <pointsize>16</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="smallDecimalPoint">
+               <bool>true</bool>
+              </property>
+              <property name="digitCount">
+               <number>9</number>
+              </property>
+              <property name="segmentStyle">
+               <enum>QLCDNumber::Flat</enum>
+              </property>
+              <property name="value" stdset="0">
+               <double>20.000000000000000</double>
+              </property>
+              <property name="intValue" stdset="0">
+               <number>20</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_42">
+              <property name="styleSheet">
+               <string notr="true">border:none;
+font:bold italic  &quot;Times New Roman&quot;;
+font-size:16px; 
+border-width:0px;
+</string>
+              </property>
+              <property name="text">
+               <string>N/m（±20）</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_Force_4">
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius:6px;
+border-width:2px;
+border-style:solid;
+border-color:white;
+background-color:#434e59;
+color:white;</string>
+     </property>
+     <property name="title">
+      <string>周边力采集：</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_12">
+      <property name="topMargin">
+       <number>30</number>
+      </property>
+      <property name="bottomMargin">
+       <number>12</number>
+      </property>
+      <item>
+       <widget class="QWidget" name="widget_30" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border:none;
+background-color:#434e59;
+font: &quot;Times New Roman&quot; 24px;</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_10">
+         <property name="leftMargin">
+          <number>9</number>
+         </property>
+         <property name="topMargin">
+          <number>9</number>
+         </property>
+         <property name="rightMargin">
+          <number>9</number>
+         </property>
+         <property name="bottomMargin">
+          <number>9</number>
+         </property>
+         <item>
+          <widget class="QWidget" name="widget_32" native="true">
+           <property name="styleSheet">
+            <string notr="true">border-radius:6px;
+border-width:2px;
+border-style:solid;
+border-color:white;</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_13">
+            <property name="spacing">
+             <number>12</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_31">
+              <property name="font">
+               <font>
+                <family>Microsoft Yahei</family>
+                <pointsize>14</pointsize>
+                <weight>50</weight>
+                <italic>false</italic>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">font-family:Microsoft Yahei;
+border:none;
+</string>
+              </property>
+              <property name="text">
+               <string>调整方向：</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" name="widget_37" native="true">
+              <property name="styleSheet">
+               <string notr="true">border:none;
+</string>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_26" stretch="3,1">
+               <item>
+                <widget class="QDoubleSpinBox" name="doubleSpinBox_ForceAngel">
+                 <property name="font">
+                  <font>
+                   <family>24px</family>
+                   <pointsize>-1</pointsize>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">font:  &quot;Times New Roman&quot;;
+font-size:14px; 
+border-radius:6px;
+border-width:2px;
+border-style:solid;
+border-color:white;</string>
+                 </property>
+                 <property name="buttonSymbols">
+                  <enum>QAbstractSpinBox::NoButtons</enum>
+                 </property>
+                 <property name="decimals">
+                  <number>0</number>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_32">
+                 <property name="styleSheet">
+                  <string notr="true">border:none;
+font:bold italic  &quot;Times New Roman&quot;;
+font-size:16px; 
+border-width:0px;
+</string>
+                 </property>
+                 <property name="text">
+                  <string>°</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QWidget" name="widget_39" native="true">
+           <property name="styleSheet">
+            <string notr="true">border-radius:6px;
+border-width:2px;
+border-style:solid;
+border-color:white;</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_15">
+            <property name="spacing">
+             <number>12</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_43">
+              <property name="font">
+               <font>
+                <family>Microsoft Yahei</family>
+                <pointsize>14</pointsize>
+                <weight>50</weight>
+                <italic>false</italic>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">font-family:Microsoft Yahei;
+border:none;
+</string>
+              </property>
+              <property name="text">
+               <string>角度间隔：</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" name="widget_40" native="true">
+              <property name="styleSheet">
+               <string notr="true">border:none;
+</string>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_34" stretch="3,1">
+               <item>
+                <widget class="QDoubleSpinBox" name="doubleSpinBox_Angel_Interval">
+                 <property name="font">
+                  <font>
+                   <family>24px</family>
+                   <pointsize>-1</pointsize>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">font:  &quot;Times New Roman&quot;;
+font-size:14px; 
+border-radius:6px;
+border-width:2px;
+border-style:solid;
+border-color:white;</string>
+                 </property>
+                 <property name="buttonSymbols">
+                  <enum>QAbstractSpinBox::NoButtons</enum>
+                 </property>
+                 <property name="decimals">
+                  <number>0</number>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_44">
+                 <property name="styleSheet">
+                  <string notr="true">border:none;
+font:bold italic  &quot;Times New Roman&quot;;
+font-size:16px; 
+border-width:0px;
+</string>
+                 </property>
+                 <property name="text">
+                  <string>°</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QWidget" name="widget_31" native="true">
+           <property name="styleSheet">
+            <string notr="true">border-radius:6px;
+border-width:2px;
+border-style:solid;
+border-color:white;</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_14">
+            <item>
+             <widget class="QLabel" name="label_29">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <family>Microsoft Yahei</family>
+                <pointsize>14</pointsize>
+                <weight>50</weight>
+                <italic>false</italic>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">font-family:Microsoft Yahei;
+border:none;</string>
+              </property>
+              <property name="text">
+               <string>调整距离：</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" name="widget_38" native="true">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">border:none;</string>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_27" stretch="3,1">
+               <item>
+                <widget class="QDoubleSpinBox" name="doubleSpinBox_ForceDistance">
+                 <property name="font">
+                  <font>
+                   <family>24px</family>
+                   <pointsize>-1</pointsize>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">font:  &quot;Times New Roman&quot;;
+font-size:14px; 
+border-radius:6px;
+border-width:2px;
+border-style:solid;
+border-color:white;</string>
+                 </property>
+                 <property name="buttonSymbols">
+                  <enum>QAbstractSpinBox::NoButtons</enum>
+                 </property>
+                 <property name="decimals">
+                  <number>1</number>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_30">
+                 <property name="styleSheet">
+                  <string notr="true">border:none;
+font:bold italic  &quot;Times New Roman&quot;;
+font-size:16px; 
+border-width:0px;
+</string>
+                 </property>
+                 <property name="text">
+                  <string>mm</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_Sensor_Monitor">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="contextMenuPolicy">
+         <enum>Qt::CustomContextMenu</enum>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton
+{
+    font-family:Microsoft Yahei;
+    color:white;
+    background-color:rgb(14 , 150 , 254);
+    border-radius:5px;
+}
+
+QPushButton:hover
+{
+    background-color:rgb(44 , 137 , 255);
+}
+
+QPushButton:pressed
+{
+    background-color:rgb(14 , 135 , 228);
+    padding-left:3px;
+    padding-top:3px;
+}
+border:none;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="resources/resources.qrc">
+          <normaloff>:/icons/icons/monitorOnW.svg</normaloff>:/icons/icons/monitorOnW.svg</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>80</width>
+          <height>80</height>
+         </size>
+        </property>
+        <property name="autoRepeat">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QChartView</class>
+   <extends>QWidget</extends>
+   <header>qchartview.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="resources/resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

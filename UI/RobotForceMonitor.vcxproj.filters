@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Distribution Files">
+      <UniqueIdentifier>{B83CAF91-C7BF-462F-B76C-EA11631F866C}</UniqueIdentifier>
+      <Extensions>*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Distribution Files">
+      <UniqueIdentifier>{B83CAF91-C7BF-462F-B76C-EA11631F866C}</UniqueIdentifier>
+      <Extensions>*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\PLC\ModbusTCP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\M3706C\MyCRC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Robot\RobotCtrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\M3706C\SensorClient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="camerathread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="connectsettings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="forceget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hikvisonsdk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mainwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mvcameras.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="orientationdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="quickchangecontrol.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sensor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="variables.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\PLC\ModbusTCP.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\M3706C\MyCRC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Robot\RobotCtrl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\M3706C\SensorClient.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="camerathread.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="connectsettings.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="forceget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="hikvisonsdk.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="mainwindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="mvcameras.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="orientationdialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="quickchangecontrol.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="sensor.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="variables.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="connectsettings.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="forceget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="mainwindow.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="orientationdialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="quickchangecontrol.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\icons\Compensate.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resources\icons\Demarcate.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resources\icons\PLC_1.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resources\icons\PLC_1W.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resources\icons\PLC_3.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resources\icons\PLC_3W.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resources\icons\PLC_LightsOff.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resources\icons\PLC_LightsOffW.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resources\icons\PLC_LightsOn.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resources\icons\caculate.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resources\icons\delete.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resources\icons\hold.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resources\icons\minius.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resources\icons\monitor.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resources\icons\monitor0ffW.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resources\icons\monitorOnW.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resources\icons\paw.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resources\icons\pawW.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resources\icons\plc.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resources\icons\plus.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resources\icons\position.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resources\icons\position_Submit.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resources\icons\position_SubmitW.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resources\qss\pushButton.qss">
+      <Filter>Resource Files</Filter>
+    </None>
+    <QtRcc Include="resources\resources.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <None Include="resources\icons\switchOff.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resources\icons\switchOn.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resources\icons\video_Bench.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resources\icons\video_BenchW.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resources\icons\video_Shot.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resources\icons\video_ShotW.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resources\icons\video_Start.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resources\icons\video_Stop.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\PLC\DMT.dll">
+      <Filter>Distribution Files</Filter>
+    </None>
+    <None Include="..\PLC\DMT.lib">
+      <Filter>Distribution Files</Filter>
+    </None>
+    <None Include="..\M3706C\log.txt">
+      <Filter>Distribution Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,45 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>icons/video_Stop.svg</file>
+        <file>icons/video_Start.svg</file>
+        <file>icons/video_Shot.svg</file>
+        <file>icons/PLC_1.svg</file>
+        <file>icons/PLC_3.svg</file>
+        <file>icons/PLC_LightsOff.svg</file>
+        <file>icons/PLC_LightsOn.svg</file>
+        <file>icons/position_Submit.svg</file>
+        <file>icons/video_Bench.svg</file>
+        <file>icons/paw.svg</file>
+        <file>icons/plc.svg</file>
+        <file>icons/position.svg</file>
+        <file>icons/hold.svg</file>
+        <file>icons/pawW.svg</file>
+        <file>icons/PLC_1W.svg</file>
+        <file>icons/PLC_3W.svg</file>
+        <file>icons/PLC_LightsOffW.svg</file>
+        <file>icons/position_SubmitW.svg</file>
+        <file>icons/video_BenchW.svg</file>
+        <file>icons/video_ShotW.svg</file>
+        <file>icons/monitor.svg</file>
+        <file>icons/monitor0ffW.svg</file>
+        <file>icons/monitorOnW.svg</file>
+        <file>icons/switchOff.svg</file>
+        <file>icons/switchOn.svg</file>
+        <file>icons/delete.svg</file>
+        <file>icons/caculate.svg</file>
+        <file>icons/minius.svg</file>
+        <file>icons/plus.svg</file>
+        <file>icons/Compensate.svg</file>
+        <file>icons/Demarcate.svg</file>
+        <file>icons/directly.svg</file>
+        <file>icons/pointMove.svg</file>
+        <file>icons/Stop.svg</file>
+        <file>icons/calculation.svg</file>
+        <file>icons/package.svg</file>
+        <file>icons/zero.svg</file>
+        <file>icons/pointLight.svg</file>
+    </qresource>
+    <qresource prefix="/qss">
+        <file>qss/pushButton.qss</file>
+    </qresource>
+</RCC>
