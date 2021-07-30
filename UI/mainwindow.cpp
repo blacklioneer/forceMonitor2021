@@ -51,6 +51,10 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow()
 {
     WriteSettings();
+    if(camera_Clicked)
+    {
+        on_CameraShot_clicked();
+    }
     disconnect(myThread,SIGNAL(mess()),this,SLOT(display()));
     disconnect(sensor, SIGNAL(EmitXYZMxMyMz(int, double *, int)),	// vector等复杂数据类型不可以
         this, SLOT(UpdateXYZMxMyMz(int, double *, int)));
@@ -71,8 +75,6 @@ MainWindow::~MainWindow()
     myThread = nullptr;
     delete myImage;
     myImage =nullptr;
-
-
 }
 
 
@@ -87,7 +89,10 @@ void MainWindow::on_toolButton_Camera_Start_clicked() /*相机开启关闭done c
     //         图标变化
            QIcon video_Stop(":/icons/icons/video_Stop.svg");
            ui->toolButton_Camera_Start->setIcon(video_Stop);
-           ui->toolButton_Camera_Start->setIconSize(QSize(40, 40));
+           ui->toolButton_Camera_Start->setIconSize(QSize(50, 50));
+           ui->CameraShot->setIcon(video_Stop);
+           ui->CameraShot->setIconSize(QSize(60, 60));
+           ui->CameraShot->setText(QString::fromLocal8Bit("相机停止"));
         }
         else{
              camera->stopCamera();
@@ -98,7 +103,10 @@ void MainWindow::on_toolButton_Camera_Start_clicked() /*相机开启关闭done c
     //         图标变化
              QIcon video_Start(":/icons/icons/video_Start.svg");
              ui->toolButton_Camera_Start->setIcon(video_Start);
-             ui->toolButton_Camera_Start->setIconSize(QSize(40, 40));
+             ui->toolButton_Camera_Start->setIconSize(QSize(50, 50));
+             ui->CameraShot->setIcon(video_Start);
+             ui->CameraShot->setIconSize(QSize(60, 60));
+             ui->CameraShot->setText(QString::fromLocal8Bit("相机启动"));
         }
         camera_Clicked = !camera_Clicked;        
     }
@@ -483,7 +491,8 @@ void MainWindow::on_toolButton_Sensor_Monitor_clicked()
     //         图标变化
            QIcon monitor_Stop(":/icons/icons/monitor0ffW.svg");
            ui->toolButton_Sensor_Monitor->setIcon(monitor_Stop);
-           ui->toolButton_Sensor_Monitor->setIconSize(QSize(80, 80));
+           ui->toolButton_Sensor_Monitor->setIconSize(QSize(50, 50));
+           ui->toolButton_Sensor_Monitor->setText(QString::fromLocal8Bit("力传停止"));
         }
         else{
             sensor->stop(monitor_Status);
@@ -492,7 +501,8 @@ void MainWindow::on_toolButton_Sensor_Monitor_clicked()
     //         图标变化
              QIcon monitor_Start(":/icons/icons/monitorOnW.svg");
              ui->toolButton_Sensor_Monitor->setIcon(monitor_Start);
-             ui->toolButton_Sensor_Monitor->setIconSize(QSize(80, 80));
+             ui->toolButton_Sensor_Monitor->setIconSize(QSize(50, 50));
+             ui->toolButton_Sensor_Monitor->setText(QString::fromLocal8Bit("力传启动"));
 
         }
         monitor_Status =! monitor_Status;
@@ -534,6 +544,9 @@ void MainWindow::ChartsInit() {
 
     chart_XYZ->legend()->show();
     chart_MXYZ->legend()->show();//hide
+    chart_XYZ->setMargins(QMargins(0, 0, 0, 0));//设置内边界全部为0
+//    chart_XYZ->setBackgroundRoundness(0);//设置背景区域无圆角
+    chart_MXYZ->setMargins(QMargins(0, 0, 0, 0));//设置内边界全部为0
 
     chart_XYZ->setTheme(QChart::ChartThemeLight);				//主题
 //    chart_XYZ->setTitle(QString::fromLocal8Bit("力数据采集"));	//标题
@@ -541,7 +554,7 @@ void MainWindow::ChartsInit() {
     //chart->axisX()->setRange(0, 100);						// x轴动态，放在槽函数里实时更新
     //chart->axisY()->setRange(-10, 20);						// y轴固定范围
     chart_XYZ->axes(Qt::Horizontal).first()->setTitleText(QString::fromLocal8Bit("时间")); //设置中文标题
-    chart_XYZ->axes(Qt::Vertical).first()->setTitleText(QString::fromLocal8Bit("力 N"));
+    chart_XYZ->axes(Qt::Vertical).first()->setTitleText(QString::fromLocal8Bit("力N"));
     chart_XYZ->axes(Qt::Vertical).first()->setTitleBrush(Qt::darkMagenta);					//设置字色
 
     chart_MXYZ->setTheme(QChart::ChartThemeLight);				//主题
@@ -550,7 +563,7 @@ void MainWindow::ChartsInit() {
     //chart->axisX()->setRange(0, 100);						// x轴动态，放在槽函数里实时更新
     //chart->axisY()->setRange(-10, 20);						// y轴固定范围
     chart_MXYZ->axes(Qt::Horizontal).first()->setTitleText(QString::fromLocal8Bit("时间")); //设置中文标题
-    chart_MXYZ->axes(Qt::Vertical).first()->setTitleText(QString::fromLocal8Bit("力矩 N·m"));
+    chart_MXYZ->axes(Qt::Vertical).first()->setTitleText(QString::fromLocal8Bit("力矩N·m"));
     chart_MXYZ->axes(Qt::Vertical).first()->setTitleBrush(Qt::darkMagenta);					//设置字色
 
     ui->widget_Chart_Coordinate->setRenderHint(QPainter::Antialiasing);		//抗锯齿渲染
@@ -864,19 +877,19 @@ void MainWindow::on_checkBox_Mz_clicked()
 
 void MainWindow::on_actionCameraOrentation_triggered()
 {
-    camera_Clicked = true;
-    on_toolButton_Camera_Start_clicked(); //关闭相机监测 状态设为关闭
-    disconnect(myThread,SIGNAL(mess()),this,SLOT(display()));
-    int cameraOriginWidth = camera->getWidth();
-    int cameraOriginheight = camera->getHeight(); //保存原始宽高比
-    orientationdialog = new OrientationDialog(this,myThread,camera,myImage);
-    orientationdialog->setModal(true);
-    orientationdialog->exec();
-    camera->setWidth(cameraOriginWidth);
-    camera->setHeight(cameraOriginheight); //恢复原始宽高比
-    delete orientationdialog;
-    orientationdialog =nullptr;
-    connect(myThread,SIGNAL(mess()),this,SLOT(display()));
+//    camera_Clicked = true;
+//    on_toolButton_Camera_Start_clicked(); //关闭相机监测 状态设为关闭
+//    disconnect(myThread,SIGNAL(mess()),this,SLOT(display()));
+//    int cameraOriginWidth = camera->getWidth();
+//    int cameraOriginheight = camera->getHeight(); //保存原始宽高比
+//    orientationdialog = new OrientationDialog(this,myThread,camera,myImage);
+//    orientationdialog->setModal(true);
+//    orientationdialog->exec();
+//    camera->setWidth(cameraOriginWidth);
+//    camera->setHeight(cameraOriginheight); //恢复原始宽高比
+//    delete orientationdialog;
+//    orientationdialog =nullptr;
+//    connect(myThread,SIGNAL(mess()),this,SLOT(display()));
 }
 //void MainWindow::display(const Mat* imagePtr)
 //{
@@ -903,26 +916,41 @@ void MainWindow::display()
 {
     //判断是黑白、彩色图像
 //    qDebug()<<"TUXZS";
-    QImage* QmyImage=new QImage();
-    QImage* QFirstImage = new QImage();
+    QImage QmyImage;
     if(myImage->channels()>1)
     {
-        *QmyImage=QImage((const unsigned char*)(myImage->data),myImage->cols, myImage->rows, QImage::Format_RGB888);
+        QmyImage=QImage((const unsigned char*)(myImage->data),myImage->cols, myImage->rows, QImage::Format_RGB888);
     }
     else
     {
-        *QmyImage=QImage((const unsigned char*)(myImage->data),myImage->cols, myImage->rows, QImage::Format_Indexed8);
+        QmyImage=QImage((const unsigned char*)(myImage->data),myImage->cols, myImage->rows, QImage::Format_Indexed8);
     }
-
-    *QmyImage = (*QmyImage).scaled(ui->CameraWidget->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
-    *QFirstImage = (*QmyImage).scaled(ui->picture->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+//    qDebug()<<myImage->data;
+    if(shotclicked)
+    {
+        QDateTime current_date_time =QDateTime::currentDateTime();
+        QString current_date =current_date_time.toString("yyyyMMddhhmmss");
+        QString current_path = camera_Save_address+"/"+current_date+".PNG";
+        qDebug()<<current_path;
+        QmyImage.save(current_path);
+        QStandardItem* itemMain = new QStandardItem(current_date+".PNG");
+        itemFirstmap[current_date+".PNG"] = itemMain; //数据map将名字与 树控件单元进行匹配创建字典
+        mModel->appendRow(itemMain);
+        picsNames.emplace_back(current_date+".PNG");
+        shotclicked = false;
+    }
+//    *QmyImage = (*QmyImage).scaled(ui->CameraWidget->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+//    *QFirstImage = (*QmyImage).scaled(ui->picture->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
     //显示图像
-    ui->CameraWidget->setPixmap(QPixmap::fromImage(*QmyImage));    
-    ui->CameraWidget->setScaledContents(true);
-    ui->picture->setPixmap(QPixmap::fromImage(*QFirstImage));
-    ui->picture->setScaledContents(true);
-    delete QmyImage;
-    delete QFirstImage;
+//    ui->CameraWidget->setPixmap(QPixmap::fromImage(*QmyImage)); //转换时间过长，考虑 换一个容器显示？ Qwidget
+//    ui->CameraWidget->setScaledContents(true);
+//    ui->picture->setPixmap(QPixmap::fromImage(*QFirstImage));
+    ui->picture->setImage(QmyImage,ui->picture->rect());
+    ui->picture->update();
+    ui->CameraWidget->setImage(QmyImage,ui->CameraWidget->rect());
+    ui->CameraWidget->update();
+//    delete QmyImage;
+//    delete QFirstImage;
 }
 
 void MainWindow::connectCamera()
@@ -934,6 +962,7 @@ void MainWindow::connectCamera()
         qDebug()<<"camera";
 //        if(camera->connectCamera("select_camera.toStdString()") == 0)
 //        if(camera->connectCamera("00D52460485") == 0)
+        qDebug()<<"find comeras"<<select_camera;
         if(camera->connectCamera(select_camera.toStdString()) == 0)
         {
             camera_Connected =true;
@@ -948,7 +977,7 @@ void MainWindow::connectCamera()
         //设置触发源为软触发
         std::cout<<"TriggerSource:  "<<camera->setTriggerSource(7)<<std::endl;
         //设置曝光时间
-        std::cout<<"SetExposureTime:  "<<camera->setExposureTime(40000)<<std::endl;
+        std::cout<<"SetExposureTime:  "<<camera->setExposureTime(10000)<<std::endl;
         //开启相机采集
         std::cout<<"StartCamera:  "<<camera->startCamera()<<std::endl;
 
@@ -1093,7 +1122,7 @@ void MainWindow::on_actionAround_ForceGet_triggered()
     on_toolButton_Sensor_Monitor_clicked();
     disconnect(sensor, SIGNAL(EmitXYZMxMyMz(int, double *, int)),	// vector等复杂数据类型不可以
         this, SLOT(UpdateXYZMxMyMz(int, double *, int)));
-    forcegetdialog = new ForceGet(this,sensor);
+    forcegetdialog = new ForceGet(this);
     forcegetdialog->setModal(true);
     forcegetdialog->exec();
     delete forcegetdialog;
@@ -1244,26 +1273,26 @@ void MainWindow::on_toolButton_Sensor_Calculate_clicked()
 
 void MainWindow::on_actionSettings_triggered()
 {
-    connectsettings = new ConnectSettings(this);
-    connectsettings->setModal(true);
-    settings =false;
-    connectsettings->exec();
-    /**重新建立连接**/
+//    connectsettings = new ConnectSettings(this);
+//    connectsettings->setModal(true);
+//    settings =false;
+//    connectsettings->exec();
+//    /**重新建立连接**/
 
-    if (settings){
-        qDebug()<< settings;
-        plc->CloseModbusTCP();
-        plc->OpenModbusTCP(plc_Address.ip.toStdString());
-        qDebug()<<sensor_Address.ip.toStdString().c_str()<<sensor_Address.port.toInt();
-        //string aaa = sensor_Address.ip.toStdString();
-        sensor->Stcp->InitTCP(sensor_Address.ip.toStdString().c_str(),sensor_Address.port.toInt());
-        camera->closeCamera();
-        connectCamera();
+//    if (settings){
+//        qDebug()<< settings;
+//        plc->CloseModbusTCP();
+//        plc->OpenModbusTCP(plc_Address.ip.toStdString());
+//        qDebug()<<sensor_Address.ip.toStdString().c_str()<<sensor_Address.port.toInt();
+//        //string aaa = sensor_Address.ip.toStdString();
+//        sensor->Stcp->InitTCP(sensor_Address.ip.toStdString().c_str(),sensor_Address.port.toInt());
+//        camera->closeCamera();
+//        connectCamera();
 
-        //机器人连接程序
-    }
-    delete connectsettings;
-    connectsettings =nullptr;
+//        //机器人连接程序
+//    }
+//    delete connectsettings;
+//    connectsettings =nullptr;
 
 }
 
@@ -1302,12 +1331,13 @@ void MainWindow::on_toolButton_Connect_Sensor_clicked()
     {
         //关闭PLC
         sensor->Stcp->DiscTCP();
-        Sensor_Connected =! Sensor_Connected;
+        Sensor_Connected = false;
         ui->lineEdit_Sensor_Connect_IP->setEnabled(true);
         ui->lineEdit_Sensor_Connect_Port->setEnabled(true);
         ui->toolButton_Connect_Sensor->setText(QString::fromLocal8Bit("连接"));
         ui->label_Connect_Sensor->setStyleSheet("min-width:30px;min-height:30px;max-width:30px;max-height:30px;border-radius:15px;"
                                              "border:1px solid black;background:red");
+        ui->toolButton_Sensor_Monitor->setEnabled(false);
     }
     else
     {
@@ -1315,12 +1345,13 @@ void MainWindow::on_toolButton_Connect_Sensor_clicked()
         sensor_Address.port = ui->lineEdit_Sensor_Connect_Port->text();
         if( sensor->Stcp->InitTCP(sensor_Address.ip.toStdString().c_str(),sensor_Address.port.toInt()) == 1)
         {
-            Sensor_Connected =! Sensor_Connected;
+            Sensor_Connected = true;
             ui->toolButton_Connect_Sensor->setText(QString::fromLocal8Bit("断开"));
             ui->lineEdit_Sensor_Connect_IP->setEnabled(false);
             ui->lineEdit_Sensor_Connect_Port->setEnabled(false);
             ui->label_Connect_Sensor->setStyleSheet("min-width:30px;min-height:30px;max-width:30px;max-height:30px;border-radius:15px;"
                                                  "border:1px solid black;background:green");
+            ui->toolButton_Sensor_Monitor->setEnabled(true);
         }
     }
 }
@@ -1335,6 +1366,7 @@ void MainWindow::UIInit()
     ui->lineEdit_Camera_Connect_IP->setText(select_camera);
     ui->lineEdit_Robot_Connect_Port->setText(robot_Address.port);
     ui->lineEdit_Robot_Connect_IP->setText(robot_Address.ip);
+    ui->toolButton_Sensor_Monitor->setEnabled(false); //传感器按钮不可用
     on_toolButton_Connect_PLC_clicked();
     on_toolButton_Connect_Sensor_clicked();
     on_toolButton_Connect_Robot_clicked();
@@ -1395,6 +1427,19 @@ void MainWindow::UIInit()
     ui->comboBox_2->setCurrentIndex(0);
     ui->toolButton_Sensor_Calculate->setEnabled(false);
     ui->toolButton_Sensor_Compensate->setEnabled(false);
+//    ui->picture->setImage(QImage(":/icons/default.png"),ui->picture->rect());
+//    ui->picture->update();
+//    ui->CameraWidget->setImage(QImage(":/icons/default.png"),ui->CameraWidget->rect());
+//    ui->picture->update();
+//    ui->picture->setImage(QImage(":/icons/default.png"),ui->picture->rect());
+//    ui->picture->update();
+//    ui->CameraWidget->setImage(QImage(":/icons/default.png"),ui->CameraWidget->rect());
+//    ui->picture->update();
+//    ui->picture->setImage(QImage(":/icons/default.png"),ui->picture->rect());
+//    ui->picture->update();
+//    ui->CameraWidget->setImage(QImage(":/icons/default.png"),ui->CameraWidget->rect());
+//    ui->picture->update();
+
 
 
 }
@@ -1439,11 +1484,14 @@ void MainWindow::on_toolButton_Connect_Camera_clicked()
     {
         //关闭相机
         camera->closeCamera();
-        camera_Connected =! camera_Connected;
+        camera_Connected = false;
         ui->lineEdit_Camera_Connect_IP->setEnabled(true);
         ui->toolButton_Connect_Camera->setText(QString::fromLocal8Bit("连接"));
         ui->label_Connect_Camera->setStyleSheet("min-width:30px;min-height:30px;max-width:30px;max-height:30px;border-radius:15px;"
                                              "border:1px solid black;background:red");
+        ui->CameraShot->setEnabled(false);
+        ui->toolButton_Camera_Start->setEnabled(false);
+
     }
     else
     {
@@ -1455,6 +1503,17 @@ void MainWindow::on_toolButton_Connect_Camera_clicked()
             ui->lineEdit_Camera_Connect_IP->setEnabled(false);
             ui->label_Connect_Camera->setStyleSheet("min-width:30px;min-height:30px;max-width:30px;max-height:30px;border-radius:15px;"
                                                  "border:1px solid black;background:green");
+            ui->CameraShot->setEnabled(true);
+            ui->toolButton_Camera_Start->setEnabled(true);
+        }
+        else
+        {
+            ui->lineEdit_Camera_Connect_IP->setEnabled(true);
+            ui->toolButton_Connect_Camera->setText(QString::fromLocal8Bit("连接"));
+            ui->label_Connect_Camera->setStyleSheet("min-width:30px;min-height:30px;max-width:30px;max-height:30px;border-radius:15px;"
+                                                 "border:1px solid black;background:red");
+            ui->CameraShot->setEnabled(false);
+            ui->toolButton_Camera_Start->setEnabled(false);
         }
     }
 }
@@ -1904,8 +1963,10 @@ void MainWindow::on_treeView_clicked(const QModelIndex &index)
                QImage image(filename);
                pix = QPixmap::fromImage(image);
                pix.scaled(ui->picture->size(), Qt::IgnoreAspectRatio );
-               ui->picture->setScaledContents(true);
-               ui->picture->setPixmap(pix);
+               ui->picture->setImage(image,ui->picture->rect());
+               ui->picture->update();
+//               ui->picture->setScaledContents(true);
+//               ui->picture->setPixmap(pix);
            }
     }
     else
@@ -1923,7 +1984,7 @@ void MainWindow::on_delete_2_clicked()
         QModelIndex curIndex = ui->treeView->currentIndex();      //当前点击的元素的index
         QString t = ui->treeView->model()->itemData(curIndex).values()[0].toString();
         QString filename = camera_Save_address + "/" +t;
-        QMessageBox:: StandardButton result = QMessageBox::warning(NULL, QStringLiteral("Warning"), QString::fromUtf8("你确定要删除吗？"), QMessageBox::Yes | QMessageBox::No,
+        QMessageBox:: StandardButton result = QMessageBox::warning(NULL, QString::fromLocal8Bit("警告！"), QString::fromLocal8Bit("你确定要删除吗？"), QMessageBox::Yes | QMessageBox::No,
                                                   QMessageBox::No);
         switch (result)
         {
@@ -1978,69 +2039,62 @@ void MainWindow::on_delete_2_clicked()
 
 void MainWindow::on_toolButton_Camera_Shot_clicked()
 {
-    QDateTime current_date_time =QDateTime::currentDateTime();
-    QString current_date =current_date_time.toString("yyyyMMddhhmmss");
-    QString current_path = camera_Save_address+"/"+current_date+".PNG";
-    qDebug()<<current_path;
+//    QDateTime current_date_time =QDateTime::currentDateTime();
+//    QString current_date =current_date_time.toString("yyyyMMddhhmmss");
+//    QString current_path = camera_Save_address+"/"+current_date+".PNG";
+//    qDebug()<<current_path;
     if(m_camera.count() != 0)
     {
         if(camera_Clicked)
         {
+            shotclicked = true;
             //            if( camera->state() ==  QCamera::ActiveState)//摄像头开启状态下才抓拍
             //                {
-                        QPixmap pixmap = ui->picture->grab();//将widget内容保存为pixmap图像信息
-                        pixmap.save(current_path);//保存为指定目录图像
+//                        QPixmap pixmap = ui->picture->grab();//将widget内容保存为pixmap图像信息
+//                        pixmap.save(current_path);//保存为指定目录图像
+//            cv::imwrite(current_path.toLocal8Bit().toStdString(),myImage->data);
             //                }
-                        QStandardItem* itemMain = new QStandardItem(current_date);
-                    //                itemMain->setData(MARK_FOLDER,ROLE_MARK);
-                        itemFirstmap[current_date] = itemMain; //数据map将名字与 树控件单元进行匹配创建字典
-                        mModel->appendRow(itemMain);
-                        picsNames.emplace_back(current_date);
+//                        QStandardItem* itemMain = new QStandardItem(current_date);
+//                    //                itemMain->setData(MARK_FOLDER,ROLE_MARK);
+//                        itemFirstmap[current_date] = itemMain; //数据map将名字与 树控件单元进行匹配创建字典
+//                        mModel->appendRow(itemMain);
+//                        picsNames.emplace_back(current_date);
         }
     }
 }
 
 void MainWindow::on_CameraShot_clicked()
 {
-    if(!camera_Clicked){
-       camera->startCamera();
-       myThread->start();
-//         图标变化
-       QIcon video_Stop(":/icons/icons/video_Stop.svg");
-       ui->CameraShot->setIcon(video_Stop);
-       ui->CameraShot->setIconSize(QSize(60, 60));
+    if(camera_Connected){
+        if(!camera_Clicked){
+           camera->startCamera();
+           myThread->start();
+    //         图标变化
+           QIcon video_Stop(":/icons/icons/video_Stop.svg");
+           ui->CameraShot->setIcon(video_Stop);
+           ui->CameraShot->setIconSize(QSize(60, 60));
+           ui->CameraShot->setText(QString::fromLocal8Bit("停\n止"));
+           ui->toolButton_Camera_Start->setIcon(video_Stop);
+           ui->toolButton_Camera_Start->setIconSize(QSize(50, 50));
+
+        }
+        else{
+             camera->stopCamera();
+             myThread->stop();
+             myThread->quit();
+             myThread->wait();
+    //         图标变化
+             QIcon video_Start(":/icons/icons/video_Start.svg");
+             ui->CameraShot->setIcon(video_Start);
+             ui->CameraShot->setIconSize(QSize(60, 60));
+             ui->CameraShot->setText(QString::fromLocal8Bit("开\n启"));
+             ui->toolButton_Camera_Start->setIcon(video_Start);
+             ui->toolButton_Camera_Start->setIconSize(QSize(50, 50));
+        }
+        camera_Clicked = !camera_Clicked;
     }
-    else{
-         camera->stopCamera();
-         myThread->stop();
-         myThread->quit();
-         myThread->wait();
-//         图标变化
-         QIcon video_Start(":/icons/icons/video_Start.svg");
-         ui->CameraShot->setIcon(video_Start);
-         ui->CameraShot->setIconSize(QSize(60, 60));
-    }
-    camera_Clicked = !camera_Clicked;
 
 
-}
-
-void MainWindow::on_Zoom_in_clicked()
-{
-    if(camera->getWidth()>=648)
-        {
-        camera->setWidth(camera->getWidth()-162);
-        camera->setHeight(camera->getWidth()-128);
-    }
-}
-
-void MainWindow::on_Zoom_out_clicked()
-{
-    if(camera->getWidth() <= 2430)
-        {
-        camera->setWidth(camera->getWidth()+162);
-        camera->setHeight(camera->getWidth()+128);
-    }
 }
 
 void MainWindow::on_caculate_clicked()
@@ -2232,4 +2286,23 @@ void MainWindow::on_comboBox_2_currentTextChanged(const QString &arg1)
     ui->doubleSpinBox_Position_A_3->setSingleStep(arg1.toDouble()*0.001);
     ui->doubleSpinBox_Position_B_3->setSingleStep(arg1.toDouble()*0.001);
     ui->doubleSpinBox_Position_C_3->setSingleStep(arg1.toDouble()*0.001);
+}
+
+void MainWindow::on_toolButton_Settings_clicked()
+{
+    camerasetting = new CameraSetting(this,camera);
+    camerasetting->setModal(true);
+    camerasetting->exec();
+    delete camerasetting;
+    camerasetting = nullptr;
+}
+
+void MainWindow::on_toolButton_Sensor_Collect_clicked()
+{
+
+    forcegetdialog = new ForceGet(this);
+    forcegetdialog->setModal(true);
+    forcegetdialog->exec();
+    delete forcegetdialog;
+    forcegetdialog = nullptr;
 }

@@ -38,6 +38,8 @@
         <file>icons/package.svg</file>
         <file>icons/zero.svg</file>
         <file>icons/pointLight.svg</file>
+        <file>default.png</file>
+        <file>icons/dataGet.svg</file>
     </qresource>
     <qresource prefix="/qss">
         <file>qss/pushButton.qss</file>

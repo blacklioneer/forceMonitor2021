@@ -1,4 +1,4 @@
-#include "hikvisonsdk.h"
+﻿#include "hikvisonsdk.h"
 
 MV_CC_DEVICE_INFO_LIST m_stDevList;         // ch:设备信息列表结构体变量，用来存储设备列表
 MV_CC_DEVICE_INFO* m_Device=NULL;                 //设备对象
@@ -6,7 +6,7 @@ MV_CC_DEVICE_INFO* m_Device=NULL;                 //设备对象
 
 HikVisonSDK::HikVisonSDK()
 {
-    m_hDevHandle    = NULL;
+    m_hDevHandle  = NULL;
 }
 
 HikVisonSDK::~HikVisonSDK()
@@ -14,7 +14,7 @@ HikVisonSDK::~HikVisonSDK()
     if (m_hDevHandle)
     {
         MV_CC_DestroyHandle(m_hDevHandle);
-        m_hDevHandle    = NULL;
+        m_hDevHandle  = NULL;
     }
 }
 

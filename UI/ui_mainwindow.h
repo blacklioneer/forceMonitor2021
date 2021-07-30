@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.15.1
+** Created by: Qt User Interface Compiler version 5.15.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -31,6 +31,8 @@
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 #include "qchartview.h"
+#include "qpaintmainwidget.h"
+#include "qpaintswidget.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -220,15 +222,11 @@ public:
     QHBoxLayout *horizontalLayout_9;
     QGroupBox *groupBox_9;
     QVBoxLayout *verticalLayout_21;
-    QLabel *picture;
+    QPaintsWidget *picture;
     QWidget *widget_7;
     QHBoxLayout *horizontalLayout_4;
     QToolButton *CameraShot;
     QSpacerItem *horizontalSpacer_10;
-    QToolButton *Zoom_in;
-    QSpacerItem *horizontalSpacer_9;
-    QToolButton *Zoom_out;
-    QSpacerItem *horizontalSpacer_3;
     QToolButton *toolButton_Camera_Shot;
     QSpacerItem *horizontalSpacer_4;
     QToolButton *toolButton_Settings;
@@ -258,21 +256,22 @@ public:
     QSpacerItem *horizontalSpacer_12;
     QSpacerItem *horizontalSpacer_14;
     QWidget *tab_main;
+    QVBoxLayout *verticalLayout_22;
     QWidget *widget_Tab2;
     QVBoxLayout *verticalLayout_30;
     QWidget *widget;
     QHBoxLayout *horizontalLayout;
     QGroupBox *groupBox_8;
     QVBoxLayout *verticalLayout_28;
-    QLabel *CameraWidget;
+    QPaintMainWidget *CameraWidget;
     QWidget *widget_4;
     QHBoxLayout *horizontalLayout_2;
     QGroupBox *groupBox_5;
     QVBoxLayout *verticalLayout_4;
     QVBoxLayout *verticalLayout_14;
+    QHBoxLayout *horizontalLayout_74;
     QChartView *widget_Chart_Coordinate;
     QHBoxLayout *horizontalLayout_21;
-    QSpacerItem *horizontalSpacer_2;
     QWidget *widget_10;
     QVBoxLayout *verticalLayout_3;
     QCheckBox *checkBox_X;
@@ -295,9 +294,9 @@ public:
     QLabel *label_19;
     QLCDNumber *lcdNumber_Z;
     QLabel *label_25;
+    QHBoxLayout *horizontalLayout_75;
     QChartView *widget_Chart_Angle;
     QHBoxLayout *horizontalLayout_5;
-    QSpacerItem *horizontalSpacer;
     QWidget *widget_3;
     QVBoxLayout *verticalLayout_2;
     QCheckBox *checkBox_Mx;
@@ -320,18 +319,8 @@ public:
     QLabel *label_22;
     QLCDNumber *lcdNumber_C;
     QLabel *label_28;
-    QGroupBox *groupBox_Force_2;
-    QHBoxLayout *horizontalLayout_10;
-    QToolButton *toolButton_Sensor_Demarcate;
-    QToolButton *toolButton_Sensor_Calculate;
-    QToolButton *toolButton_Sensor_Compensate;
-    QGroupBox *groupBox_Force_4;
-    QVBoxLayout *verticalLayout_19;
-    QToolButton *toolButton_Sensor_Monitor;
-    QToolButton *toolButton_Camera_Start;
-    QGroupBox *groupBox_Force_3;
-    QHBoxLayout *horizontalLayout_26;
-    QToolButton *toolButton_Sensor_Calculate_2;
+    QWidget *widget_59;
+    QHBoxLayout *horizontalLayout_73;
     QGroupBox *groupBox_PositionControl_2;
     QHBoxLayout *horizontalLayout_48;
     QGroupBox *groupBox_7;
@@ -399,6 +388,22 @@ public:
     QToolButton *Zero_All_2;
     QToolButton *toolButton_Submit_2;
     QToolButton *toolButton_SuddenStop_2;
+    QWidget *widget_58;
+    QVBoxLayout *verticalLayout_19;
+    QGroupBox *groupBox_Force_2;
+    QHBoxLayout *horizontalLayout_10;
+    QToolButton *toolButton_Sensor_Demarcate;
+    QToolButton *toolButton_Sensor_Calculate;
+    QToolButton *toolButton_Sensor_Compensate;
+    QWidget *widget_57;
+    QHBoxLayout *horizontalLayout_72;
+    QGroupBox *groupBox_Force_3;
+    QHBoxLayout *horizontalLayout_26;
+    QToolButton *toolButton_Sensor_Collect;
+    QGroupBox *groupBox_Force_4;
+    QHBoxLayout *horizontalLayout_71;
+    QToolButton *toolButton_Camera_Start;
+    QToolButton *toolButton_Sensor_Monitor;
     QWidget *widget_2;
     QHBoxLayout *horizontalLayout_34;
     QWidget *widget_5;
@@ -437,7 +442,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(1824, 976);
+        MainWindow->resize(1824, 969);
         QFont font;
         font.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
         font.setPointSize(24);
@@ -482,7 +487,7 @@ public:
         tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
         QFont font2;
         font2.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
-        font2.setPointSize(20);
+        font2.setPointSize(16);
         font2.setBold(true);
         font2.setWeight(75);
         tabWidget->setFont(font2);
@@ -718,12 +723,7 @@ public:
 
         label_Connect_PLC = new QLabel(groupBox_2);
         label_Connect_PLC->setObjectName(QString::fromUtf8("label_Connect_PLC"));
-        QFont font8;
-        font8.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
-        font8.setPointSize(16);
-        font8.setBold(true);
-        font8.setWeight(75);
-        label_Connect_PLC->setFont(font8);
+        label_Connect_PLC->setFont(font2);
         label_Connect_PLC->setStyleSheet(QString::fromUtf8("min-width:30px;\n"
 "min-height:30px;\n"
 "max-width:30px;\n"
@@ -857,7 +857,7 @@ public:
 
         label_Connect_Sensor = new QLabel(groupBox_6);
         label_Connect_Sensor->setObjectName(QString::fromUtf8("label_Connect_Sensor"));
-        label_Connect_Sensor->setFont(font8);
+        label_Connect_Sensor->setFont(font2);
         label_Connect_Sensor->setStyleSheet(QString::fromUtf8("min-width:30px;\n"
 "min-height:30px;\n"
 "max-width:30px;\n"
@@ -993,7 +993,7 @@ public:
 
         label_Connect_Robot = new QLabel(groupBox_4);
         label_Connect_Robot->setObjectName(QString::fromUtf8("label_Connect_Robot"));
-        label_Connect_Robot->setFont(font8);
+        label_Connect_Robot->setFont(font2);
         label_Connect_Robot->setStyleSheet(QString::fromUtf8("min-width:30px;\n"
 "min-height:30px;\n"
 "max-width:30px;\n"
@@ -1092,7 +1092,7 @@ public:
 
         label_Connect_Camera = new QLabel(groupBox_3);
         label_Connect_Camera->setObjectName(QString::fromUtf8("label_Connect_Camera"));
-        label_Connect_Camera->setFont(font8);
+        label_Connect_Camera->setFont(font2);
         label_Connect_Camera->setStyleSheet(QString::fromUtf8("min-width:30px;\n"
 "min-height:30px;\n"
 "max-width:30px;\n"
@@ -1160,12 +1160,12 @@ public:
 
         doubleSpinBox_Position_X = new QDoubleSpinBox(widget_16);
         doubleSpinBox_Position_X->setObjectName(QString::fromUtf8("doubleSpinBox_Position_X"));
-        QFont font9;
-        font9.setFamily(QString::fromUtf8("24px"));
-        font9.setBold(false);
-        font9.setItalic(false);
-        font9.setWeight(50);
-        doubleSpinBox_Position_X->setFont(font9);
+        QFont font8;
+        font8.setFamily(QString::fromUtf8("24px"));
+        font8.setBold(false);
+        font8.setItalic(false);
+        font8.setWeight(50);
+        doubleSpinBox_Position_X->setFont(font8);
         doubleSpinBox_Position_X->setContextMenuPolicy(Qt::DefaultContextMenu);
         doubleSpinBox_Position_X->setAcceptDrops(false);
         doubleSpinBox_Position_X->setAutoFillBackground(false);
@@ -1331,7 +1331,7 @@ public:
 
         doubleSpinBox_Position_Y = new QDoubleSpinBox(widget_19);
         doubleSpinBox_Position_Y->setObjectName(QString::fromUtf8("doubleSpinBox_Position_Y"));
-        doubleSpinBox_Position_Y->setFont(font9);
+        doubleSpinBox_Position_Y->setFont(font8);
         doubleSpinBox_Position_Y->setContextMenuPolicy(Qt::DefaultContextMenu);
         doubleSpinBox_Position_Y->setAcceptDrops(false);
         doubleSpinBox_Position_Y->setAutoFillBackground(false);
@@ -1491,7 +1491,7 @@ public:
 
         doubleSpinBox_Position_Z = new QDoubleSpinBox(widget_22);
         doubleSpinBox_Position_Z->setObjectName(QString::fromUtf8("doubleSpinBox_Position_Z"));
-        doubleSpinBox_Position_Z->setFont(font9);
+        doubleSpinBox_Position_Z->setFont(font8);
         doubleSpinBox_Position_Z->setContextMenuPolicy(Qt::DefaultContextMenu);
         doubleSpinBox_Position_Z->setAcceptDrops(false);
         doubleSpinBox_Position_Z->setAutoFillBackground(false);
@@ -1657,7 +1657,7 @@ public:
 
         doubleSpinBox_Position_A = new QDoubleSpinBox(widget_17);
         doubleSpinBox_Position_A->setObjectName(QString::fromUtf8("doubleSpinBox_Position_A"));
-        doubleSpinBox_Position_A->setFont(font9);
+        doubleSpinBox_Position_A->setFont(font8);
         doubleSpinBox_Position_A->setContextMenuPolicy(Qt::DefaultContextMenu);
         doubleSpinBox_Position_A->setAcceptDrops(false);
         doubleSpinBox_Position_A->setAutoFillBackground(false);
@@ -1817,7 +1817,7 @@ public:
 
         doubleSpinBox_Position_B = new QDoubleSpinBox(widget_20);
         doubleSpinBox_Position_B->setObjectName(QString::fromUtf8("doubleSpinBox_Position_B"));
-        doubleSpinBox_Position_B->setFont(font9);
+        doubleSpinBox_Position_B->setFont(font8);
         doubleSpinBox_Position_B->setContextMenuPolicy(Qt::DefaultContextMenu);
         doubleSpinBox_Position_B->setAcceptDrops(false);
         doubleSpinBox_Position_B->setAutoFillBackground(false);
@@ -1976,7 +1976,7 @@ public:
 
         doubleSpinBox_Position_C = new QDoubleSpinBox(widget_23);
         doubleSpinBox_Position_C->setObjectName(QString::fromUtf8("doubleSpinBox_Position_C"));
-        doubleSpinBox_Position_C->setFont(font9);
+        doubleSpinBox_Position_C->setFont(font8);
         doubleSpinBox_Position_C->setContextMenuPolicy(Qt::DefaultContextMenu);
         doubleSpinBox_Position_C->setAcceptDrops(false);
         doubleSpinBox_Position_C->setAutoFillBackground(false);
@@ -2139,13 +2139,13 @@ public:
         sizePolicy1.setVerticalStretch(0);
         sizePolicy1.setHeightForWidth(label_31->sizePolicy().hasHeightForWidth());
         label_31->setSizePolicy(sizePolicy1);
-        QFont font10;
-        font10.setFamily(QString::fromUtf8("Microsoft Yahei"));
-        font10.setPointSize(20);
-        font10.setBold(true);
-        font10.setItalic(false);
-        font10.setWeight(75);
-        label_31->setFont(font10);
+        QFont font9;
+        font9.setFamily(QString::fromUtf8("Microsoft Yahei"));
+        font9.setPointSize(20);
+        font9.setBold(true);
+        font9.setItalic(false);
+        font9.setWeight(75);
+        label_31->setFont(font9);
         label_31->setStyleSheet(QString::fromUtf8("font:bold  \"Times New Roman\";    \n"
 "font-family:Microsoft Yahei;\n"
 "padding:6px;\n"
@@ -2207,7 +2207,7 @@ public:
         label_32->setObjectName(QString::fromUtf8("label_32"));
         sizePolicy1.setHeightForWidth(label_32->sizePolicy().hasHeightForWidth());
         label_32->setSizePolicy(sizePolicy1);
-        label_32->setFont(font10);
+        label_32->setFont(font9);
         label_32->setStyleSheet(QString::fromUtf8("font:bold  \"Times New Roman\";    \n"
 "font-family:Microsoft Yahei;\n"
 "padding:6px;\n"
@@ -2218,13 +2218,13 @@ public:
 
         comboBox = new QComboBox(widget_42);
         comboBox->setObjectName(QString::fromUtf8("comboBox"));
-        QFont font11;
-        font11.setFamily(QString::fromUtf8("24px"));
-        font11.setPointSize(24);
-        font11.setBold(false);
-        font11.setItalic(false);
-        font11.setWeight(50);
-        comboBox->setFont(font11);
+        QFont font10;
+        font10.setFamily(QString::fromUtf8("24px"));
+        font10.setPointSize(24);
+        font10.setBold(false);
+        font10.setItalic(false);
+        font10.setWeight(50);
+        comboBox->setFont(font10);
         comboBox->setStyleSheet(QString::fromUtf8("border-radius:3px;\n"
 "border-width:2px;\n"
 "border-style:solid;\n"
@@ -2244,13 +2244,13 @@ public:
         horizontalLayout_42->setObjectName(QString::fromUtf8("horizontalLayout_42"));
         Zero_All = new QToolButton(groupBox);
         Zero_All->setObjectName(QString::fromUtf8("Zero_All"));
-        QFont font12;
-        font12.setFamily(QString::fromUtf8("Microsoft Yahei"));
-        font12.setPointSize(20);
-        font12.setBold(false);
-        font12.setItalic(false);
-        font12.setWeight(50);
-        Zero_All->setFont(font12);
+        QFont font11;
+        font11.setFamily(QString::fromUtf8("Microsoft Yahei"));
+        font11.setPointSize(20);
+        font11.setBold(false);
+        font11.setItalic(false);
+        font11.setWeight(50);
+        Zero_All->setFont(font11);
         Zero_All->setStyleSheet(QString::fromUtf8("QToolButton\n"
 "{\n"
 "    font-family:Microsoft Yahei;\n"
@@ -2286,7 +2286,7 @@ public:
         toolButton_Submit->setEnabled(true);
         sizePolicy.setHeightForWidth(toolButton_Submit->sizePolicy().hasHeightForWidth());
         toolButton_Submit->setSizePolicy(sizePolicy);
-        toolButton_Submit->setFont(font12);
+        toolButton_Submit->setFont(font11);
         toolButton_Submit->setMouseTracking(false);
         toolButton_Submit->setTabletTracking(false);
         toolButton_Submit->setStyleSheet(QString::fromUtf8("QToolButton\n"
@@ -2326,7 +2326,7 @@ public:
         sizePolicy.setHeightForWidth(toolButton_SuddenStop->sizePolicy().hasHeightForWidth());
         toolButton_SuddenStop->setSizePolicy(sizePolicy);
         toolButton_SuddenStop->setMinimumSize(QSize(120, 0));
-        toolButton_SuddenStop->setFont(font12);
+        toolButton_SuddenStop->setFont(font11);
         toolButton_SuddenStop->setMouseTracking(false);
         toolButton_SuddenStop->setTabletTracking(false);
         toolButton_SuddenStop->setStyleSheet(QString::fromUtf8("QToolButton\n"
@@ -2378,7 +2378,7 @@ public:
         verticalLayout_8 = new QVBoxLayout();
         verticalLayout_8->setSpacing(24);
         verticalLayout_8->setObjectName(QString::fromUtf8("verticalLayout_8"));
-        verticalLayout_8->setContentsMargins(0, 0, 0, 0);
+        verticalLayout_8->setContentsMargins(12, 0, 12, 12);
         groupBox_Force = new QGroupBox(tabWidget_Settings);
         groupBox_Force->setObjectName(QString::fromUtf8("groupBox_Force"));
         groupBox_Force->setFont(font4);
@@ -2412,7 +2412,7 @@ public:
         horizontalLayout_35->setContentsMargins(3, 3, 3, 3);
         label_PLC_Vacuum = new QLabel(widget_37);
         label_PLC_Vacuum->setObjectName(QString::fromUtf8("label_PLC_Vacuum"));
-        label_PLC_Vacuum->setFont(font8);
+        label_PLC_Vacuum->setFont(font2);
         label_PLC_Vacuum->setStyleSheet(QString::fromUtf8("min-width:30px;\n"
 "min-height:30px;\n"
 "max-width:30px;\n"
@@ -2490,7 +2490,7 @@ public:
         horizontalLayout_36->setContentsMargins(3, 3, 3, 3);
         label_PLC_DestroyVacuum = new QLabel(widget_38);
         label_PLC_DestroyVacuum->setObjectName(QString::fromUtf8("label_PLC_DestroyVacuum"));
-        label_PLC_DestroyVacuum->setFont(font8);
+        label_PLC_DestroyVacuum->setFont(font2);
         label_PLC_DestroyVacuum->setStyleSheet(QString::fromUtf8("min-width:30px;\n"
 "min-height:30px;\n"
 "max-width:30px;\n"
@@ -2566,7 +2566,7 @@ public:
         horizontalLayout_29->setContentsMargins(3, 3, 3, 3);
         label_PLC_SuckScrew = new QLabel(widget_33);
         label_PLC_SuckScrew->setObjectName(QString::fromUtf8("label_PLC_SuckScrew"));
-        label_PLC_SuckScrew->setFont(font8);
+        label_PLC_SuckScrew->setFont(font2);
         label_PLC_SuckScrew->setStyleSheet(QString::fromUtf8("min-width:30px;\n"
 "min-height:30px;\n"
 "max-width:30px;\n"
@@ -2654,7 +2654,7 @@ public:
         horizontalLayout_30->setContentsMargins(3, 3, 3, 3);
         label_PLC_Tighten = new QLabel(widget_34);
         label_PLC_Tighten->setObjectName(QString::fromUtf8("label_PLC_Tighten"));
-        label_PLC_Tighten->setFont(font8);
+        label_PLC_Tighten->setFont(font2);
         label_PLC_Tighten->setStyleSheet(QString::fromUtf8("min-width:30px;\n"
 "min-height:30px;\n"
 "max-width:30px;\n"
@@ -2728,7 +2728,7 @@ public:
         horizontalLayout_32->setContentsMargins(3, 3, 3, 3);
         label_PLC_MultiGripper = new QLabel(widget_36);
         label_PLC_MultiGripper->setObjectName(QString::fromUtf8("label_PLC_MultiGripper"));
-        label_PLC_MultiGripper->setFont(font8);
+        label_PLC_MultiGripper->setFont(font2);
         label_PLC_MultiGripper->setStyleSheet(QString::fromUtf8("min-width:30px;\n"
 "min-height:30px;\n"
 "max-width:30px;\n"
@@ -2802,7 +2802,7 @@ public:
         horizontalLayout_31->setContentsMargins(3, 3, 3, 3);
         label_PLC_SingleGripper = new QLabel(widget_35);
         label_PLC_SingleGripper->setObjectName(QString::fromUtf8("label_PLC_SingleGripper"));
-        label_PLC_SingleGripper->setFont(font8);
+        label_PLC_SingleGripper->setFont(font2);
         label_PLC_SingleGripper->setStyleSheet(QString::fromUtf8("min-width:30px;\n"
 "min-height:30px;\n"
 "max-width:30px;\n"
@@ -2887,7 +2887,7 @@ public:
         horizontalLayout_46->setContentsMargins(3, 3, 3, 3);
         label_PLC_QuickChange = new QLabel(widget_44);
         label_PLC_QuickChange->setObjectName(QString::fromUtf8("label_PLC_QuickChange"));
-        label_PLC_QuickChange->setFont(font8);
+        label_PLC_QuickChange->setFont(font2);
         label_PLC_QuickChange->setStyleSheet(QString::fromUtf8("min-width:30px;\n"
 "min-height:30px;\n"
 "max-width:30px;\n"
@@ -2961,7 +2961,7 @@ public:
         horizontalLayout_45->setContentsMargins(3, 3, 3, 3);
         label_PLC_Light = new QLabel(widget_43);
         label_PLC_Light->setObjectName(QString::fromUtf8("label_PLC_Light"));
-        label_PLC_Light->setFont(font8);
+        label_PLC_Light->setFont(font2);
         label_PLC_Light->setStyleSheet(QString::fromUtf8("min-width:30px;\n"
 "min-height:30px;\n"
 "max-width:30px;\n"
@@ -3026,7 +3026,7 @@ public:
 
         groupBox_29 = new QGroupBox(widget_29);
         groupBox_29->setObjectName(QString::fromUtf8("groupBox_29"));
-        groupBox_29->setFont(font8);
+        groupBox_29->setFont(font2);
         groupBox_29->setStyleSheet(QString::fromUtf8("border-radius:3px;\n"
 "border-width:2px;\n"
 "border-style:solid;\n"
@@ -3038,7 +3038,7 @@ public:
         horizontalLayout_33->setContentsMargins(72, 12, 72, 3);
         label_PLC_IO = new QLabel(groupBox_29);
         label_PLC_IO->setObjectName(QString::fromUtf8("label_PLC_IO"));
-        label_PLC_IO->setFont(font8);
+        label_PLC_IO->setFont(font2);
         label_PLC_IO->setStyleSheet(QString::fromUtf8("min-width:30px;\n"
 "min-height:30px;\n"
 "max-width:30px;\n"
@@ -3111,7 +3111,6 @@ public:
 
         verticalLayout_8->addWidget(groupBox_Force);
 
-        verticalLayout_8->setStretch(0, 1);
 
         verticalLayout_20->addLayout(verticalLayout_8);
 
@@ -3124,26 +3123,19 @@ public:
         groupBox_9->setObjectName(QString::fromUtf8("groupBox_9"));
         verticalLayout_21 = new QVBoxLayout(groupBox_9);
         verticalLayout_21->setObjectName(QString::fromUtf8("verticalLayout_21"));
-        picture = new QLabel(groupBox_9);
+        picture = new QPaintsWidget(groupBox_9);
         picture->setObjectName(QString::fromUtf8("picture"));
-        QSizePolicy sizePolicy3(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
-        sizePolicy3.setHorizontalStretch(0);
-        sizePolicy3.setVerticalStretch(0);
-        sizePolicy3.setHeightForWidth(picture->sizePolicy().hasHeightForWidth());
-        picture->setSizePolicy(sizePolicy3);
         picture->setMinimumSize(QSize(800, 600));
-        picture->setStyleSheet(QString::fromUtf8("background-color:#434e59;\n"
-"color:white;"));
 
         verticalLayout_21->addWidget(picture);
 
         widget_7 = new QWidget(groupBox_9);
         widget_7->setObjectName(QString::fromUtf8("widget_7"));
-        QSizePolicy sizePolicy4(QSizePolicy::Preferred, QSizePolicy::Fixed);
-        sizePolicy4.setHorizontalStretch(0);
-        sizePolicy4.setVerticalStretch(0);
-        sizePolicy4.setHeightForWidth(widget_7->sizePolicy().hasHeightForWidth());
-        widget_7->setSizePolicy(sizePolicy4);
+        QSizePolicy sizePolicy3(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(widget_7->sizePolicy().hasHeightForWidth());
+        widget_7->setSizePolicy(sizePolicy3);
         widget_7->setStyleSheet(QString::fromUtf8("border-radius:3px;\n"
 "border-width:2px;\n"
 "border-style:solid;\n"
@@ -3153,12 +3145,12 @@ public:
         horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
         CameraShot = new QToolButton(widget_7);
         CameraShot->setObjectName(QString::fromUtf8("CameraShot"));
-        QFont font13;
-        font13.setFamily(QString::fromUtf8("Microsoft Yahei"));
-        font13.setPointSize(16);
-        font13.setBold(true);
-        font13.setWeight(75);
-        CameraShot->setFont(font13);
+        QFont font12;
+        font12.setFamily(QString::fromUtf8("Microsoft Yahei"));
+        font12.setPointSize(16);
+        font12.setBold(true);
+        font12.setWeight(75);
+        CameraShot->setFont(font12);
         CameraShot->setStyleSheet(QString::fromUtf8("QToolButton\n"
 "{\n"
 "    font-family:Microsoft Yahei;\n"
@@ -3191,75 +3183,9 @@ public:
 
         horizontalLayout_4->addItem(horizontalSpacer_10);
 
-        Zoom_in = new QToolButton(widget_7);
-        Zoom_in->setObjectName(QString::fromUtf8("Zoom_in"));
-        Zoom_in->setFont(font13);
-        Zoom_in->setStyleSheet(QString::fromUtf8("QToolButton\n"
-"{\n"
-"    font-family:Microsoft Yahei;\n"
-"    color:white;\n"
-"    background-color:rgb(14 , 150 , 254);\n"
-"    border-radius:10px;\n"
-"}\n"
-"\n"
-"QToolButton:hover\n"
-"{\n"
-"    background-color:rgb(44 , 137 , 255);\n"
-"}\n"
-"\n"
-"QToolButton:pressed\n"
-"{\n"
-"    background-color:rgb(14 , 135 , 228);\n"
-"    padding-left:3px;\n"
-"    padding-top:3px;\n"
-"}\n"
-"border:none;"));
-        Zoom_in->setIcon(icon1);
-        Zoom_in->setIconSize(QSize(60, 60));
-        Zoom_in->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
-
-        horizontalLayout_4->addWidget(Zoom_in);
-
-        horizontalSpacer_9 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_4->addItem(horizontalSpacer_9);
-
-        Zoom_out = new QToolButton(widget_7);
-        Zoom_out->setObjectName(QString::fromUtf8("Zoom_out"));
-        Zoom_out->setFont(font13);
-        Zoom_out->setStyleSheet(QString::fromUtf8("QToolButton\n"
-"{\n"
-"    font-family:Microsoft Yahei;\n"
-"    color:white;\n"
-"    background-color:rgb(14 , 150 , 254);\n"
-"    border-radius:10px;\n"
-"}\n"
-"\n"
-"QToolButton:hover\n"
-"{\n"
-"    background-color:rgb(44 , 137 , 255);\n"
-"}\n"
-"\n"
-"QToolButton:pressed\n"
-"{\n"
-"    background-color:rgb(14 , 135 , 228);\n"
-"    padding-left:3px;\n"
-"    padding-top:3px;\n"
-"}\n"
-"border:none;"));
-        Zoom_out->setIcon(icon);
-        Zoom_out->setIconSize(QSize(60, 60));
-        Zoom_out->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
-
-        horizontalLayout_4->addWidget(Zoom_out);
-
-        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_4->addItem(horizontalSpacer_3);
-
         toolButton_Camera_Shot = new QToolButton(widget_7);
         toolButton_Camera_Shot->setObjectName(QString::fromUtf8("toolButton_Camera_Shot"));
-        toolButton_Camera_Shot->setFont(font13);
+        toolButton_Camera_Shot->setFont(font12);
         toolButton_Camera_Shot->setStyleSheet(QString::fromUtf8("QToolButton\n"
 "{\n"
 "    font-family:Microsoft Yahei;\n"
@@ -3294,7 +3220,7 @@ public:
 
         toolButton_Settings = new QToolButton(widget_7);
         toolButton_Settings->setObjectName(QString::fromUtf8("toolButton_Settings"));
-        toolButton_Settings->setFont(font13);
+        toolButton_Settings->setFont(font12);
         toolButton_Settings->setLayoutDirection(Qt::LeftToRight);
         toolButton_Settings->setStyleSheet(QString::fromUtf8("QToolButton\n"
 "{\n"
@@ -3332,7 +3258,7 @@ public:
 
         toolButton = new QToolButton(widget_7);
         toolButton->setObjectName(QString::fromUtf8("toolButton"));
-        toolButton->setFont(font13);
+        toolButton->setFont(font12);
         toolButton->setLayoutDirection(Qt::LeftToRight);
         toolButton->setStyleSheet(QString::fromUtf8("QToolButton\n"
 "{\n"
@@ -3367,12 +3293,19 @@ public:
 
         verticalLayout_21->addWidget(widget_7);
 
+        verticalLayout_21->setStretch(0, 10);
+        verticalLayout_21->setStretch(1, 1);
 
         horizontalLayout_9->addWidget(groupBox_9);
 
         groupBox_10 = new QGroupBox(tab_3);
         groupBox_10->setObjectName(QString::fromUtf8("groupBox_10"));
-        groupBox_10->setFont(font2);
+        QFont font13;
+        font13.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
+        font13.setPointSize(20);
+        font13.setBold(true);
+        font13.setWeight(75);
+        groupBox_10->setFont(font13);
         groupBox_10->setStyleSheet(QString::fromUtf8("border-radius:6px;\n"
 "border-width:2px;\n"
 "border-style:solid;\n"
@@ -3418,8 +3351,8 @@ public:
 
         widget_12 = new QWidget(groupBox_10);
         widget_12->setObjectName(QString::fromUtf8("widget_12"));
-        sizePolicy4.setHeightForWidth(widget_12->sizePolicy().hasHeightForWidth());
-        widget_12->setSizePolicy(sizePolicy4);
+        sizePolicy3.setHeightForWidth(widget_12->sizePolicy().hasHeightForWidth());
+        widget_12->setSizePolicy(sizePolicy3);
         widget_12->setStyleSheet(QString::fromUtf8("border-radius:3px;\n"
 "border-width:2px;\n"
 "border-style:solid;\n"
@@ -3562,7 +3495,13 @@ public:
         point_Add->setEnabled(true);
         sizePolicy.setHeightForWidth(point_Add->sizePolicy().hasHeightForWidth());
         point_Add->setSizePolicy(sizePolicy);
-        point_Add->setFont(font7);
+        QFont font14;
+        font14.setFamily(QString::fromUtf8("Microsoft Yahei"));
+        font14.setPointSize(24);
+        font14.setBold(true);
+        font14.setItalic(false);
+        font14.setWeight(75);
+        point_Add->setFont(font14);
         point_Add->setMouseTracking(false);
         point_Add->setTabletTracking(false);
         point_Add->setStyleSheet(QString::fromUtf8("QToolButton\n"
@@ -3606,7 +3545,7 @@ public:
         point_Change->setEnabled(true);
         sizePolicy.setHeightForWidth(point_Change->sizePolicy().hasHeightForWidth());
         point_Change->setSizePolicy(sizePolicy);
-        point_Change->setFont(font7);
+        point_Change->setFont(font14);
         point_Change->setMouseTracking(false);
         point_Change->setTabletTracking(false);
         point_Change->setStyleSheet(QString::fromUtf8("QToolButton\n"
@@ -3650,7 +3589,7 @@ public:
         point_Remove->setEnabled(true);
         sizePolicy.setHeightForWidth(point_Remove->sizePolicy().hasHeightForWidth());
         point_Remove->setSizePolicy(sizePolicy);
-        point_Remove->setFont(font7);
+        point_Remove->setFont(font14);
         point_Remove->setMouseTracking(false);
         point_Remove->setTabletTracking(false);
         point_Remove->setStyleSheet(QString::fromUtf8("QToolButton\n"
@@ -3709,25 +3648,27 @@ public:
         tabWidget->addTab(tab_test, QString());
         tab_main = new QWidget();
         tab_main->setObjectName(QString::fromUtf8("tab_main"));
+        verticalLayout_22 = new QVBoxLayout(tab_main);
+        verticalLayout_22->setObjectName(QString::fromUtf8("verticalLayout_22"));
         widget_Tab2 = new QWidget(tab_main);
         widget_Tab2->setObjectName(QString::fromUtf8("widget_Tab2"));
-        widget_Tab2->setGeometry(QRect(9, 9, 1215, 358));
         verticalLayout_30 = new QVBoxLayout(widget_Tab2);
         verticalLayout_30->setObjectName(QString::fromUtf8("verticalLayout_30"));
+        verticalLayout_30->setContentsMargins(-1, -1, -1, 0);
         widget = new QWidget(widget_Tab2);
         widget->setObjectName(QString::fromUtf8("widget"));
         horizontalLayout = new QHBoxLayout(widget);
         horizontalLayout->setSpacing(24);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        horizontalLayout->setContentsMargins(24, 0, 24, 0);
+        horizontalLayout->setContentsMargins(0, 0, 0, 0);
         groupBox_8 = new QGroupBox(widget);
         groupBox_8->setObjectName(QString::fromUtf8("groupBox_8"));
-        QFont font14;
-        font14.setFamily(QString::fromUtf8("Microsoft YaHei"));
-        font14.setPointSize(16);
-        font14.setBold(true);
-        font14.setWeight(75);
-        groupBox_8->setFont(font14);
+        QFont font15;
+        font15.setFamily(QString::fromUtf8("Microsoft YaHei"));
+        font15.setPointSize(16);
+        font15.setBold(true);
+        font15.setWeight(75);
+        groupBox_8->setFont(font15);
         groupBox_8->setStyleSheet(QString::fromUtf8("border-radius:6px;\n"
 "border-width:2px;\n"
 "border-style:solid;\n"
@@ -3738,13 +3679,8 @@ public:
         verticalLayout_28->setSpacing(24);
         verticalLayout_28->setObjectName(QString::fromUtf8("verticalLayout_28"));
         verticalLayout_28->setContentsMargins(24, 24, 24, 12);
-        CameraWidget = new QLabel(groupBox_8);
+        CameraWidget = new QPaintMainWidget(groupBox_8);
         CameraWidget->setObjectName(QString::fromUtf8("CameraWidget"));
-        sizePolicy3.setHeightForWidth(CameraWidget->sizePolicy().hasHeightForWidth());
-        CameraWidget->setSizePolicy(sizePolicy3);
-        CameraWidget->setMinimumSize(QSize(400, 300));
-        CameraWidget->setStyleSheet(QString::fromUtf8("background-color:#434e59;"));
-        CameraWidget->setAlignment(Qt::AlignCenter);
 
         verticalLayout_28->addWidget(CameraWidget);
 
@@ -3759,12 +3695,12 @@ public:
         horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
         groupBox_5 = new QGroupBox(widget_4);
         groupBox_5->setObjectName(QString::fromUtf8("groupBox_5"));
-        QFont font15;
-        font15.setFamily(QString::fromUtf8("Microsoft YaHei UI"));
-        font15.setPointSize(16);
-        font15.setBold(true);
-        font15.setWeight(75);
-        groupBox_5->setFont(font15);
+        QFont font16;
+        font16.setFamily(QString::fromUtf8("Microsoft YaHei UI"));
+        font16.setPointSize(16);
+        font16.setBold(true);
+        font16.setWeight(75);
+        groupBox_5->setFont(font16);
         groupBox_5->setAcceptDrops(true);
         groupBox_5->setStyleSheet(QString::fromUtf8("border-radius:6px;\n"
 "border-width:2px;\n"
@@ -3778,7 +3714,11 @@ public:
         verticalLayout_4->setContentsMargins(24, 24, 12, 12);
         verticalLayout_14 = new QVBoxLayout();
         verticalLayout_14->setObjectName(QString::fromUtf8("verticalLayout_14"));
-        verticalLayout_14->setContentsMargins(12, 0, 12, 12);
+        verticalLayout_14->setContentsMargins(12, 0, 12, 0);
+        horizontalLayout_74 = new QHBoxLayout();
+        horizontalLayout_74->setSpacing(6);
+        horizontalLayout_74->setObjectName(QString::fromUtf8("horizontalLayout_74"));
+        horizontalLayout_74->setContentsMargins(0, 0, 0, 0);
         widget_Chart_Coordinate = new QChartView(groupBox_5);
         widget_Chart_Coordinate->setObjectName(QString::fromUtf8("widget_Chart_Coordinate"));
         widget_Chart_Coordinate->setStyleSheet(QString::fromUtf8("background-color:#434e59;"));
@@ -3786,28 +3726,27 @@ public:
         horizontalLayout_21->setSpacing(0);
         horizontalLayout_21->setObjectName(QString::fromUtf8("horizontalLayout_21"));
         horizontalLayout_21->setContentsMargins(0, 0, 0, 0);
-        horizontalSpacer_2 = new QSpacerItem(508, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_21->addItem(horizontalSpacer_2);
+        horizontalLayout_74->addWidget(widget_Chart_Coordinate);
 
-        widget_10 = new QWidget(widget_Chart_Coordinate);
+        widget_10 = new QWidget(groupBox_5);
         widget_10->setObjectName(QString::fromUtf8("widget_10"));
-        QFont font16;
-        font16.setFamily(QString::fromUtf8("Times New Roman"));
-        font16.setPointSize(12);
-        font16.setBold(true);
-        font16.setWeight(75);
-        widget_10->setFont(font16);
+        QFont font17;
+        font17.setFamily(QString::fromUtf8("Times New Roman"));
+        font17.setPointSize(12);
+        font17.setBold(true);
+        font17.setWeight(75);
+        widget_10->setFont(font17);
         verticalLayout_3 = new QVBoxLayout(widget_10);
         verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
         checkBox_X = new QCheckBox(widget_10);
         checkBox_X->setObjectName(QString::fromUtf8("checkBox_X"));
-        QFont font17;
-        font17.setFamily(QString::fromUtf8("Times New Roman"));
-        font17.setBold(true);
-        font17.setItalic(true);
-        font17.setWeight(75);
-        checkBox_X->setFont(font17);
+        QFont font18;
+        font18.setFamily(QString::fromUtf8("Times New Roman"));
+        font18.setBold(true);
+        font18.setItalic(true);
+        font18.setWeight(75);
+        checkBox_X->setFont(font18);
         checkBox_X->setStyleSheet(QString::fromUtf8("border:none;\n"
 "font:bold italic  \"Times New Roman\";\n"
 "font-size:16px; \n"
@@ -3819,7 +3758,7 @@ public:
 
         checkBox_Y = new QCheckBox(widget_10);
         checkBox_Y->setObjectName(QString::fromUtf8("checkBox_Y"));
-        checkBox_Y->setFont(font17);
+        checkBox_Y->setFont(font18);
         checkBox_Y->setTabletTracking(false);
         checkBox_Y->setStyleSheet(QString::fromUtf8("border:none;\n"
 "font:bold italic  \"Times New Roman\";\n"
@@ -3833,7 +3772,7 @@ public:
 
         checkBox_Z = new QCheckBox(widget_10);
         checkBox_Z->setObjectName(QString::fromUtf8("checkBox_Z"));
-        checkBox_Z->setFont(font17);
+        checkBox_Z->setFont(font18);
         checkBox_Z->setStyleSheet(QString::fromUtf8("border:none;\n"
 "font:bold italic  \"Times New Roman\";\n"
 "font-size:16px; \n"
@@ -3844,10 +3783,12 @@ public:
         verticalLayout_3->addWidget(checkBox_Z);
 
 
-        horizontalLayout_21->addWidget(widget_10);
+        horizontalLayout_74->addWidget(widget_10);
 
+        horizontalLayout_74->setStretch(0, 16);
+        horizontalLayout_74->setStretch(1, 1);
 
-        verticalLayout_14->addWidget(widget_Chart_Coordinate);
+        verticalLayout_14->addLayout(horizontalLayout_74);
 
         widget_24 = new QWidget(groupBox_5);
         widget_24->setObjectName(QString::fromUtf8("widget_24"));
@@ -3880,11 +3821,11 @@ public:
 
         lcdNumber_X = new QLCDNumber(widget_9);
         lcdNumber_X->setObjectName(QString::fromUtf8("lcdNumber_X"));
-        QFont font18;
-        font18.setBold(false);
-        font18.setItalic(false);
-        font18.setWeight(50);
-        lcdNumber_X->setFont(font18);
+        QFont font19;
+        font19.setBold(false);
+        font19.setItalic(false);
+        font19.setWeight(50);
+        lcdNumber_X->setFont(font19);
         lcdNumber_X->setStyleSheet(QString::fromUtf8("font:  \"Times New Roman\";\n"
 "font-size:20px; "));
         lcdNumber_X->setSmallDecimalPoint(true);
@@ -3897,12 +3838,12 @@ public:
 
         label_23 = new QLabel(widget_9);
         label_23->setObjectName(QString::fromUtf8("label_23"));
-        QFont font19;
-        font19.setFamily(QString::fromUtf8("Microsoft Yahei"));
-        font19.setBold(true);
-        font19.setItalic(false);
-        font19.setWeight(75);
-        label_23->setFont(font19);
+        QFont font20;
+        font20.setFamily(QString::fromUtf8("Microsoft Yahei"));
+        font20.setBold(true);
+        font20.setItalic(false);
+        font20.setWeight(75);
+        label_23->setFont(font20);
         label_23->setStyleSheet(QString::fromUtf8("border:none;\n"
 "font:bold  \"Times New Roman\";    \n"
 "font-family:Microsoft Yahei;\n"
@@ -3937,7 +3878,7 @@ public:
 
         lcdNumber_Y = new QLCDNumber(widget_11);
         lcdNumber_Y->setObjectName(QString::fromUtf8("lcdNumber_Y"));
-        lcdNumber_Y->setFont(font18);
+        lcdNumber_Y->setFont(font19);
         lcdNumber_Y->setStyleSheet(QString::fromUtf8("font:  \"Times New Roman\";\n"
 "font-size:20px; "));
         lcdNumber_Y->setSmallDecimalPoint(true);
@@ -3984,7 +3925,7 @@ public:
 
         lcdNumber_Z = new QLCDNumber(widget_14);
         lcdNumber_Z->setObjectName(QString::fromUtf8("lcdNumber_Z"));
-        lcdNumber_Z->setFont(font18);
+        lcdNumber_Z->setFont(font19);
         lcdNumber_Z->setStyleSheet(QString::fromUtf8("font:  \"Times New Roman\";\n"
 "font-size:20px; "));
         lcdNumber_Z->setSmallDecimalPoint(true);
@@ -4012,6 +3953,9 @@ public:
 
         verticalLayout_14->addWidget(widget_24);
 
+        horizontalLayout_75 = new QHBoxLayout();
+        horizontalLayout_75->setObjectName(QString::fromUtf8("horizontalLayout_75"));
+        horizontalLayout_75->setContentsMargins(0, 0, 0, 0);
         widget_Chart_Angle = new QChartView(groupBox_5);
         widget_Chart_Angle->setObjectName(QString::fromUtf8("widget_Chart_Angle"));
         widget_Chart_Angle->setStyleSheet(QString::fromUtf8("background-color:#434e59;"));
@@ -4019,13 +3963,12 @@ public:
         horizontalLayout_5->setSpacing(0);
         horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
         horizontalLayout_5->setContentsMargins(0, 0, 0, 0);
-        horizontalSpacer = new QSpacerItem(495, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_5->addItem(horizontalSpacer);
+        horizontalLayout_75->addWidget(widget_Chart_Angle);
 
-        widget_3 = new QWidget(widget_Chart_Angle);
+        widget_3 = new QWidget(groupBox_5);
         widget_3->setObjectName(QString::fromUtf8("widget_3"));
-        widget_3->setFont(font16);
+        widget_3->setFont(font17);
         verticalLayout_2 = new QVBoxLayout(widget_3);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         checkBox_Mx = new QCheckBox(widget_3);
@@ -4062,10 +4005,12 @@ public:
         verticalLayout_2->addWidget(checkBox_Mz);
 
 
-        horizontalLayout_5->addWidget(widget_3);
+        horizontalLayout_75->addWidget(widget_3);
 
+        horizontalLayout_75->setStretch(0, 16);
+        horizontalLayout_75->setStretch(1, 1);
 
-        verticalLayout_14->addWidget(widget_Chart_Angle);
+        verticalLayout_14->addLayout(horizontalLayout_75);
 
         widget_25 = new QWidget(groupBox_5);
         widget_25->setObjectName(QString::fromUtf8("widget_25"));
@@ -4097,7 +4042,7 @@ public:
 
         lcdNumber_A = new QLCDNumber(widget_26);
         lcdNumber_A->setObjectName(QString::fromUtf8("lcdNumber_A"));
-        lcdNumber_A->setFont(font18);
+        lcdNumber_A->setFont(font19);
         lcdNumber_A->setStyleSheet(QString::fromUtf8("font:  \"Times New Roman\";\n"
 "font-size:20px; "));
         lcdNumber_A->setSmallDecimalPoint(true);
@@ -4144,7 +4089,7 @@ public:
 
         lcdNumber_B = new QLCDNumber(widget_27);
         lcdNumber_B->setObjectName(QString::fromUtf8("lcdNumber_B"));
-        lcdNumber_B->setFont(font18);
+        lcdNumber_B->setFont(font19);
         lcdNumber_B->setStyleSheet(QString::fromUtf8("font:  \"Times New Roman\";\n"
 "font-size:20px; "));
         lcdNumber_B->setSmallDecimalPoint(true);
@@ -4191,9 +4136,9 @@ public:
 
         lcdNumber_C = new QLCDNumber(widget_28);
         lcdNumber_C->setObjectName(QString::fromUtf8("lcdNumber_C"));
-        QFont font20;
-        font20.setPointSize(16);
-        lcdNumber_C->setFont(font20);
+        QFont font21;
+        font21.setPointSize(16);
+        lcdNumber_C->setFont(font21);
         lcdNumber_C->setStyleSheet(QString::fromUtf8(""));
         lcdNumber_C->setSmallDecimalPoint(true);
         lcdNumber_C->setDigitCount(9);
@@ -4220,9 +4165,9 @@ public:
 
         verticalLayout_14->addWidget(widget_25);
 
-        verticalLayout_14->setStretch(0, 4);
+        verticalLayout_14->setStretch(0, 9);
         verticalLayout_14->setStretch(1, 1);
-        verticalLayout_14->setStretch(2, 4);
+        verticalLayout_14->setStretch(2, 9);
         verticalLayout_14->setStretch(3, 1);
 
         verticalLayout_4->addLayout(verticalLayout_14);
@@ -4239,292 +4184,17 @@ public:
         verticalLayout_30->addWidget(widget);
 
         verticalLayout_30->setStretch(0, 6);
-        groupBox_Force_2 = new QGroupBox(tab_main);
-        groupBox_Force_2->setObjectName(QString::fromUtf8("groupBox_Force_2"));
-        groupBox_Force_2->setGeometry(QRect(1300, 310, 299, 136));
-        groupBox_Force_2->setFont(font14);
-        groupBox_Force_2->setStyleSheet(QString::fromUtf8("border-radius:6px;\n"
-"border-width:2px;\n"
-"border-style:solid;\n"
-"border-color:white;\n"
-"background-color:#314659;\n"
-"color:white;"));
-        horizontalLayout_10 = new QHBoxLayout(groupBox_Force_2);
-        horizontalLayout_10->setSpacing(20);
-        horizontalLayout_10->setObjectName(QString::fromUtf8("horizontalLayout_10"));
-        horizontalLayout_10->setContentsMargins(12, 36, 12, 0);
-        toolButton_Sensor_Demarcate = new QToolButton(groupBox_Force_2);
-        toolButton_Sensor_Demarcate->setObjectName(QString::fromUtf8("toolButton_Sensor_Demarcate"));
-        sizePolicy3.setHeightForWidth(toolButton_Sensor_Demarcate->sizePolicy().hasHeightForWidth());
-        toolButton_Sensor_Demarcate->setSizePolicy(sizePolicy3);
-        QFont font21;
-        font21.setFamily(QString::fromUtf8("Microsoft Yahei"));
-        font21.setPointSize(20);
-        font21.setKerning(true);
-        toolButton_Sensor_Demarcate->setFont(font21);
-        toolButton_Sensor_Demarcate->setContextMenuPolicy(Qt::CustomContextMenu);
-        toolButton_Sensor_Demarcate->setAcceptDrops(false);
-        toolButton_Sensor_Demarcate->setLayoutDirection(Qt::LeftToRight);
-        toolButton_Sensor_Demarcate->setAutoFillBackground(false);
-        toolButton_Sensor_Demarcate->setStyleSheet(QString::fromUtf8("QToolButton\n"
-"{\n"
-"    font-family:Microsoft Yahei;\n"
-"    color:white;\n"
-"    background-color:rgb(14 , 150 , 254);\n"
-"    border-radius:20px;\n"
-"}\n"
-"\n"
-"QToolButton:hover\n"
-"{\n"
-"    background-color:rgb(44 , 137 , 255);\n"
-"}\n"
-"\n"
-"QToolButton:pressed\n"
-"{\n"
-"    background-color:rgb(14 , 135 , 228);\n"
-"    padding-left:3px;\n"
-"    padding-top:3px;\n"
-"}\n"
-"QToolButton:disabled\n"
-"{\n"
-"    background-color:grey;\n"
-"}\n"
-"border:none;"));
-        QIcon icon12;
-        icon12.addFile(QString::fromUtf8(":/icons/icons/Demarcate.svg"), QSize(), QIcon::Normal, QIcon::Off);
-        toolButton_Sensor_Demarcate->setIcon(icon12);
-        toolButton_Sensor_Demarcate->setIconSize(QSize(50, 50));
-        toolButton_Sensor_Demarcate->setAutoRepeat(false);
-        toolButton_Sensor_Demarcate->setAutoExclusive(false);
-        toolButton_Sensor_Demarcate->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
 
-        horizontalLayout_10->addWidget(toolButton_Sensor_Demarcate, 0, Qt::AlignHCenter|Qt::AlignVCenter);
+        verticalLayout_22->addWidget(widget_Tab2);
 
-        toolButton_Sensor_Calculate = new QToolButton(groupBox_Force_2);
-        toolButton_Sensor_Calculate->setObjectName(QString::fromUtf8("toolButton_Sensor_Calculate"));
-        toolButton_Sensor_Calculate->setEnabled(true);
-        sizePolicy3.setHeightForWidth(toolButton_Sensor_Calculate->sizePolicy().hasHeightForWidth());
-        toolButton_Sensor_Calculate->setSizePolicy(sizePolicy3);
-        toolButton_Sensor_Calculate->setFont(font21);
-        toolButton_Sensor_Calculate->setContextMenuPolicy(Qt::CustomContextMenu);
-        toolButton_Sensor_Calculate->setAcceptDrops(false);
-        toolButton_Sensor_Calculate->setLayoutDirection(Qt::LeftToRight);
-        toolButton_Sensor_Calculate->setAutoFillBackground(false);
-        toolButton_Sensor_Calculate->setStyleSheet(QString::fromUtf8("QToolButton\n"
-"{\n"
-"    font-family:Microsoft Yahei;\n"
-"    color:white;\n"
-"    background-color:rgb(14 , 150 , 254);\n"
-"    border-radius:20px;\n"
-"}\n"
-"\n"
-"QToolButton:hover\n"
-"{\n"
-"    background-color:rgb(44 , 137 , 255);\n"
-"}\n"
-"\n"
-"QToolButton:pressed\n"
-"{\n"
-"    background-color:rgb(14 , 135 , 228);\n"
-"    padding-left:3px;\n"
-"    padding-top:3px;\n"
-"}\n"
-"QToolButton:disabled\n"
-"{\n"
-"    background-color:grey;\n"
-"}\n"
-"border:none;"));
-        QIcon icon13;
-        icon13.addFile(QString::fromUtf8(":/icons/icons/calculation.svg"), QSize(), QIcon::Normal, QIcon::Off);
-        toolButton_Sensor_Calculate->setIcon(icon13);
-        toolButton_Sensor_Calculate->setIconSize(QSize(50, 50));
-        toolButton_Sensor_Calculate->setAutoRepeat(false);
-        toolButton_Sensor_Calculate->setAutoExclusive(false);
-        toolButton_Sensor_Calculate->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
-
-        horizontalLayout_10->addWidget(toolButton_Sensor_Calculate, 0, Qt::AlignVCenter);
-
-        toolButton_Sensor_Compensate = new QToolButton(groupBox_Force_2);
-        toolButton_Sensor_Compensate->setObjectName(QString::fromUtf8("toolButton_Sensor_Compensate"));
-        sizePolicy3.setHeightForWidth(toolButton_Sensor_Compensate->sizePolicy().hasHeightForWidth());
-        toolButton_Sensor_Compensate->setSizePolicy(sizePolicy3);
-        QFont font22;
-        font22.setFamily(QString::fromUtf8("Microsoft Yahei"));
-        font22.setPointSize(20);
-        toolButton_Sensor_Compensate->setFont(font22);
-        toolButton_Sensor_Compensate->setContextMenuPolicy(Qt::CustomContextMenu);
-        toolButton_Sensor_Compensate->setLayoutDirection(Qt::LeftToRight);
-        toolButton_Sensor_Compensate->setStyleSheet(QString::fromUtf8("QToolButton\n"
-"{\n"
-"    font-family:Microsoft Yahei;\n"
-"    color:white;\n"
-"    background-color:rgb(14 , 150 , 254);\n"
-"    border-radius:20px;\n"
-"}\n"
-"\n"
-"QToolButton:hover\n"
-"{\n"
-"    background-color:rgb(44 , 137 , 255);\n"
-"}\n"
-"\n"
-"QToolButton:pressed\n"
-"{\n"
-"    background-color:rgb(14 , 135 , 228);\n"
-"    padding-left:3px;\n"
-"    padding-top:3px;\n"
-"}\n"
-"QToolButton:disabled\n"
-"{\n"
-"    background-color:grey;\n"
-"}\n"
-"border:none;"));
-        QIcon icon14;
-        icon14.addFile(QString::fromUtf8(":/icons/icons/Compensate.svg"), QSize(), QIcon::Normal, QIcon::Off);
-        toolButton_Sensor_Compensate->setIcon(icon14);
-        toolButton_Sensor_Compensate->setIconSize(QSize(50, 50));
-        toolButton_Sensor_Compensate->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
-
-        horizontalLayout_10->addWidget(toolButton_Sensor_Compensate, 0, Qt::AlignVCenter);
-
-        groupBox_Force_4 = new QGroupBox(tab_main);
-        groupBox_Force_4->setObjectName(QString::fromUtf8("groupBox_Force_4"));
-        groupBox_Force_4->setGeometry(QRect(1510, 510, 153, 174));
-        groupBox_Force_4->setFont(font14);
-        groupBox_Force_4->setStyleSheet(QString::fromUtf8("border-radius:6px;\n"
-"border-width:2px;\n"
-"border-style:solid;\n"
-"border-color:white;\n"
-"background-color:#314659;\n"
-"color:white;"));
-        verticalLayout_19 = new QVBoxLayout(groupBox_Force_4);
-        verticalLayout_19->setSpacing(12);
-        verticalLayout_19->setObjectName(QString::fromUtf8("verticalLayout_19"));
-        verticalLayout_19->setContentsMargins(12, 12, 12, 12);
-        toolButton_Sensor_Monitor = new QToolButton(groupBox_Force_4);
-        toolButton_Sensor_Monitor->setObjectName(QString::fromUtf8("toolButton_Sensor_Monitor"));
-        sizePolicy4.setHeightForWidth(toolButton_Sensor_Monitor->sizePolicy().hasHeightForWidth());
-        toolButton_Sensor_Monitor->setSizePolicy(sizePolicy4);
-        toolButton_Sensor_Monitor->setFont(font13);
-        toolButton_Sensor_Monitor->setContextMenuPolicy(Qt::CustomContextMenu);
-        toolButton_Sensor_Monitor->setLayoutDirection(Qt::LeftToRight);
-        toolButton_Sensor_Monitor->setStyleSheet(QString::fromUtf8("QToolButton\n"
-"{\n"
-"    font-family:Microsoft Yahei;\n"
-"    color:white;\n"
-"    background-color:rgb(14 , 150 , 254);\n"
-"    border-radius:10px;\n"
-"}\n"
-"\n"
-"QToolButton:hover\n"
-"{\n"
-"    background-color:rgb(44 , 137 , 255);\n"
-"}\n"
-"\n"
-"QToolButton:pressed\n"
-"{\n"
-"    background-color:rgb(14 , 135 , 228);\n"
-"    padding-left:3px;\n"
-"    padding-top:3px;\n"
-"}\n"
-"border:none;"));
-        QIcon icon15;
-        icon15.addFile(QString::fromUtf8(":/icons/icons/monitorOnW.svg"), QSize(), QIcon::Normal, QIcon::Off);
-        toolButton_Sensor_Monitor->setIcon(icon15);
-        toolButton_Sensor_Monitor->setIconSize(QSize(60, 60));
-        toolButton_Sensor_Monitor->setAutoRepeat(false);
-        toolButton_Sensor_Monitor->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
-
-        verticalLayout_19->addWidget(toolButton_Sensor_Monitor, 0, Qt::AlignHCenter);
-
-        toolButton_Camera_Start = new QToolButton(groupBox_Force_4);
-        toolButton_Camera_Start->setObjectName(QString::fromUtf8("toolButton_Camera_Start"));
-        toolButton_Camera_Start->setFont(font13);
-        toolButton_Camera_Start->setStyleSheet(QString::fromUtf8("QToolButton\n"
-"{\n"
-"    font-family:Microsoft Yahei;\n"
-"    color:white;\n"
-"    background-color:rgb(14 , 150 , 254);\n"
-"    border-radius:10px;\n"
-"}\n"
-"\n"
-"QToolButton:hover\n"
-"{\n"
-"    background-color:rgb(44 , 137 , 255);\n"
-"}\n"
-"\n"
-"QToolButton:pressed\n"
-"{\n"
-"    background-color:rgb(14 , 135 , 228);\n"
-"    padding-left:3px;\n"
-"    padding-top:3px;\n"
-"}\n"
-"border:none;"));
-        toolButton_Camera_Start->setIcon(icon6);
-        toolButton_Camera_Start->setIconSize(QSize(60, 60));
-        toolButton_Camera_Start->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
-
-        verticalLayout_19->addWidget(toolButton_Camera_Start, 0, Qt::AlignHCenter);
-
-        groupBox_Force_3 = new QGroupBox(tab_main);
-        groupBox_Force_3->setObjectName(QString::fromUtf8("groupBox_Force_3"));
-        groupBox_Force_3->setGeometry(QRect(1360, 490, 105, 148));
-        groupBox_Force_3->setFont(font14);
-        groupBox_Force_3->setStyleSheet(QString::fromUtf8("border-radius:6px;\n"
-"border-width:2px;\n"
-"border-style:solid;\n"
-"border-color:white;\n"
-"background-color:#314659;\n"
-"color:white;"));
-        horizontalLayout_26 = new QHBoxLayout(groupBox_Force_3);
-        horizontalLayout_26->setSpacing(20);
-        horizontalLayout_26->setObjectName(QString::fromUtf8("horizontalLayout_26"));
-        horizontalLayout_26->setContentsMargins(12, 36, 12, 12);
-        toolButton_Sensor_Calculate_2 = new QToolButton(groupBox_Force_3);
-        toolButton_Sensor_Calculate_2->setObjectName(QString::fromUtf8("toolButton_Sensor_Calculate_2"));
-        toolButton_Sensor_Calculate_2->setEnabled(true);
-        sizePolicy3.setHeightForWidth(toolButton_Sensor_Calculate_2->sizePolicy().hasHeightForWidth());
-        toolButton_Sensor_Calculate_2->setSizePolicy(sizePolicy3);
-        toolButton_Sensor_Calculate_2->setFont(font21);
-        toolButton_Sensor_Calculate_2->setContextMenuPolicy(Qt::CustomContextMenu);
-        toolButton_Sensor_Calculate_2->setAcceptDrops(false);
-        toolButton_Sensor_Calculate_2->setLayoutDirection(Qt::LeftToRight);
-        toolButton_Sensor_Calculate_2->setAutoFillBackground(false);
-        toolButton_Sensor_Calculate_2->setStyleSheet(QString::fromUtf8("QToolButton\n"
-"{\n"
-"    font-family:Microsoft Yahei;\n"
-"    color:white;\n"
-"    background-color:rgb(14 , 150 , 254);\n"
-"    border-radius:20px;\n"
-"}\n"
-"\n"
-"QToolButton:hover\n"
-"{\n"
-"    background-color:rgb(44 , 137 , 255);\n"
-"}\n"
-"\n"
-"QToolButton:pressed\n"
-"{\n"
-"    background-color:rgb(14 , 135 , 228);\n"
-"    padding-left:3px;\n"
-"    padding-top:3px;\n"
-"}\n"
-"QToolButton:disabled\n"
-"{\n"
-"    background-color:grey;\n"
-"}\n"
-"border:none;"));
-        toolButton_Sensor_Calculate_2->setIcon(icon13);
-        toolButton_Sensor_Calculate_2->setIconSize(QSize(50, 50));
-        toolButton_Sensor_Calculate_2->setAutoRepeat(false);
-        toolButton_Sensor_Calculate_2->setAutoExclusive(false);
-        toolButton_Sensor_Calculate_2->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
-
-        horizontalLayout_26->addWidget(toolButton_Sensor_Calculate_2, 0, Qt::AlignVCenter);
-
-        groupBox_PositionControl_2 = new QGroupBox(tab_main);
+        widget_59 = new QWidget(tab_main);
+        widget_59->setObjectName(QString::fromUtf8("widget_59"));
+        horizontalLayout_73 = new QHBoxLayout(widget_59);
+        horizontalLayout_73->setObjectName(QString::fromUtf8("horizontalLayout_73"));
+        horizontalLayout_73->setContentsMargins(-1, -1, -1, 0);
+        groupBox_PositionControl_2 = new QGroupBox(widget_59);
         groupBox_PositionControl_2->setObjectName(QString::fromUtf8("groupBox_PositionControl_2"));
-        groupBox_PositionControl_2->setGeometry(QRect(10, 470, 1222, 331));
-        groupBox_PositionControl_2->setFont(font4);
+        groupBox_PositionControl_2->setFont(font15);
         groupBox_PositionControl_2->setStyleSheet(QString::fromUtf8("border-radius:6px;\n"
 "border-width:2px;\n"
 "border-style:solid;\n"
@@ -4534,7 +4204,7 @@ public:
         horizontalLayout_48 = new QHBoxLayout(groupBox_PositionControl_2);
         horizontalLayout_48->setSpacing(24);
         horizontalLayout_48->setObjectName(QString::fromUtf8("horizontalLayout_48"));
-        horizontalLayout_48->setContentsMargins(24, 36, 24, 24);
+        horizontalLayout_48->setContentsMargins(24, 24, 24, 12);
         groupBox_7 = new QGroupBox(groupBox_PositionControl_2);
         groupBox_7->setObjectName(QString::fromUtf8("groupBox_7"));
         groupBox_7->setStyleSheet(QString::fromUtf8("border:none;\n"
@@ -4549,7 +4219,7 @@ public:
         horizontalLayout_51 = new QHBoxLayout(groupBox_7);
         horizontalLayout_51->setSpacing(12);
         horizontalLayout_51->setObjectName(QString::fromUtf8("horizontalLayout_51"));
-        horizontalLayout_51->setContentsMargins(24, 24, 24, 24);
+        horizontalLayout_51->setContentsMargins(12, 12, 12, 12);
         verticalLayout_13 = new QVBoxLayout();
         verticalLayout_13->setObjectName(QString::fromUtf8("verticalLayout_13"));
         verticalLayout_13->setContentsMargins(12, -1, 12, -1);
@@ -4558,8 +4228,9 @@ public:
         widget_49->setStyleSheet(QString::fromUtf8("font: \"Times New Roman\" 24px;\n"
 ""));
         horizontalLayout_60 = new QHBoxLayout(widget_49);
+        horizontalLayout_60->setSpacing(6);
         horizontalLayout_60->setObjectName(QString::fromUtf8("horizontalLayout_60"));
-        horizontalLayout_60->setContentsMargins(6, 6, 6, 6);
+        horizontalLayout_60->setContentsMargins(6, 2, 6, 2);
         label_53 = new QLabel(widget_49);
         label_53->setObjectName(QString::fromUtf8("label_53"));
         label_53->setStyleSheet(QString::fromUtf8("font:bold  \"Times New Roman\";    \n"
@@ -4567,11 +4238,11 @@ public:
 "font-size:24px; \n"
 "border-width:0px;"));
 
-        horizontalLayout_60->addWidget(label_53);
+        horizontalLayout_60->addWidget(label_53, 0, Qt::AlignVCenter);
 
         doubleSpinBox_Position_X_3 = new QDoubleSpinBox(widget_49);
         doubleSpinBox_Position_X_3->setObjectName(QString::fromUtf8("doubleSpinBox_Position_X_3"));
-        doubleSpinBox_Position_X_3->setFont(font9);
+        doubleSpinBox_Position_X_3->setFont(font8);
         doubleSpinBox_Position_X_3->setContextMenuPolicy(Qt::DefaultContextMenu);
         doubleSpinBox_Position_X_3->setAcceptDrops(false);
         doubleSpinBox_Position_X_3->setAutoFillBackground(false);
@@ -4601,7 +4272,7 @@ public:
 "border-width:0px;\n"
 ""));
 
-        horizontalLayout_60->addWidget(label_54);
+        horizontalLayout_60->addWidget(label_54, 0, Qt::AlignVCenter);
 
         Minius_X_2 = new QPushButton(widget_49);
         Minius_X_2->setObjectName(QString::fromUtf8("Minius_X_2"));
@@ -4719,7 +4390,7 @@ public:
         horizontalLayout_61 = new QHBoxLayout(widget_50);
         horizontalLayout_61->setSpacing(6);
         horizontalLayout_61->setObjectName(QString::fromUtf8("horizontalLayout_61"));
-        horizontalLayout_61->setContentsMargins(6, 6, 6, 6);
+        horizontalLayout_61->setContentsMargins(6, 2, 6, 2);
         label_55 = new QLabel(widget_50);
         label_55->setObjectName(QString::fromUtf8("label_55"));
         label_55->setStyleSheet(QString::fromUtf8("font:bold  \"Times New Roman\";    \n"
@@ -4731,7 +4402,7 @@ public:
 
         doubleSpinBox_Position_Y_3 = new QDoubleSpinBox(widget_50);
         doubleSpinBox_Position_Y_3->setObjectName(QString::fromUtf8("doubleSpinBox_Position_Y_3"));
-        doubleSpinBox_Position_Y_3->setFont(font9);
+        doubleSpinBox_Position_Y_3->setFont(font8);
         doubleSpinBox_Position_Y_3->setContextMenuPolicy(Qt::DefaultContextMenu);
         doubleSpinBox_Position_Y_3->setAcceptDrops(false);
         doubleSpinBox_Position_Y_3->setAutoFillBackground(false);
@@ -4879,7 +4550,7 @@ public:
         horizontalLayout_62 = new QHBoxLayout(widget_51);
         horizontalLayout_62->setSpacing(6);
         horizontalLayout_62->setObjectName(QString::fromUtf8("horizontalLayout_62"));
-        horizontalLayout_62->setContentsMargins(6, 6, 6, 6);
+        horizontalLayout_62->setContentsMargins(6, 2, 6, 2);
         label_59 = new QLabel(widget_51);
         label_59->setObjectName(QString::fromUtf8("label_59"));
         label_59->setStyleSheet(QString::fromUtf8("font:bold  \"Times New Roman\";    \n"
@@ -4891,7 +4562,7 @@ public:
 
         doubleSpinBox_Position_Z_3 = new QDoubleSpinBox(widget_51);
         doubleSpinBox_Position_Z_3->setObjectName(QString::fromUtf8("doubleSpinBox_Position_Z_3"));
-        doubleSpinBox_Position_Z_3->setFont(font9);
+        doubleSpinBox_Position_Z_3->setFont(font8);
         doubleSpinBox_Position_Z_3->setContextMenuPolicy(Qt::DefaultContextMenu);
         doubleSpinBox_Position_Z_3->setAcceptDrops(false);
         doubleSpinBox_Position_Z_3->setAutoFillBackground(false);
@@ -5045,7 +4716,7 @@ public:
         horizontalLayout_63 = new QHBoxLayout(widget_52);
         horizontalLayout_63->setSpacing(6);
         horizontalLayout_63->setObjectName(QString::fromUtf8("horizontalLayout_63"));
-        horizontalLayout_63->setContentsMargins(6, 6, 6, 6);
+        horizontalLayout_63->setContentsMargins(6, 2, 6, 2);
         label_61 = new QLabel(widget_52);
         label_61->setObjectName(QString::fromUtf8("label_61"));
         label_61->setStyleSheet(QString::fromUtf8("font:bold  \"Times New Roman\";    \n"
@@ -5053,11 +4724,11 @@ public:
 "font-size:24px; \n"
 "border-width:0px;"));
 
-        horizontalLayout_63->addWidget(label_61);
+        horizontalLayout_63->addWidget(label_61, 0, Qt::AlignVCenter);
 
         doubleSpinBox_Position_A_3 = new QDoubleSpinBox(widget_52);
         doubleSpinBox_Position_A_3->setObjectName(QString::fromUtf8("doubleSpinBox_Position_A_3"));
-        doubleSpinBox_Position_A_3->setFont(font9);
+        doubleSpinBox_Position_A_3->setFont(font8);
         doubleSpinBox_Position_A_3->setContextMenuPolicy(Qt::DefaultContextMenu);
         doubleSpinBox_Position_A_3->setAcceptDrops(false);
         doubleSpinBox_Position_A_3->setAutoFillBackground(false);
@@ -5087,7 +4758,7 @@ public:
 "border-width:0px;\n"
 ""));
 
-        horizontalLayout_63->addWidget(label_62);
+        horizontalLayout_63->addWidget(label_62, 0, Qt::AlignVCenter);
 
         Minius_A_2 = new QPushButton(widget_52);
         Minius_A_2->setObjectName(QString::fromUtf8("Minius_A_2"));
@@ -5205,7 +4876,7 @@ public:
         horizontalLayout_64 = new QHBoxLayout(widget_53);
         horizontalLayout_64->setSpacing(6);
         horizontalLayout_64->setObjectName(QString::fromUtf8("horizontalLayout_64"));
-        horizontalLayout_64->setContentsMargins(6, 6, 6, 6);
+        horizontalLayout_64->setContentsMargins(6, 2, 6, 2);
         label_63 = new QLabel(widget_53);
         label_63->setObjectName(QString::fromUtf8("label_63"));
         label_63->setStyleSheet(QString::fromUtf8("font:bold  \"Times New Roman\";    \n"
@@ -5217,7 +4888,7 @@ public:
 
         doubleSpinBox_Position_B_3 = new QDoubleSpinBox(widget_53);
         doubleSpinBox_Position_B_3->setObjectName(QString::fromUtf8("doubleSpinBox_Position_B_3"));
-        doubleSpinBox_Position_B_3->setFont(font9);
+        doubleSpinBox_Position_B_3->setFont(font8);
         doubleSpinBox_Position_B_3->setContextMenuPolicy(Qt::DefaultContextMenu);
         doubleSpinBox_Position_B_3->setAcceptDrops(false);
         doubleSpinBox_Position_B_3->setAutoFillBackground(false);
@@ -5364,7 +5035,7 @@ public:
         horizontalLayout_65 = new QHBoxLayout(widget_54);
         horizontalLayout_65->setSpacing(6);
         horizontalLayout_65->setObjectName(QString::fromUtf8("horizontalLayout_65"));
-        horizontalLayout_65->setContentsMargins(6, 6, 6, 6);
+        horizontalLayout_65->setContentsMargins(6, 2, 6, 2);
         label_65 = new QLabel(widget_54);
         label_65->setObjectName(QString::fromUtf8("label_65"));
         label_65->setStyleSheet(QString::fromUtf8("font:bold  \"Times New Roman\";    \n"
@@ -5376,7 +5047,7 @@ public:
 
         doubleSpinBox_Position_C_3 = new QDoubleSpinBox(widget_54);
         doubleSpinBox_Position_C_3->setObjectName(QString::fromUtf8("doubleSpinBox_Position_C_3"));
-        doubleSpinBox_Position_C_3->setFont(font9);
+        doubleSpinBox_Position_C_3->setFont(font8);
         doubleSpinBox_Position_C_3->setContextMenuPolicy(Qt::DefaultContextMenu);
         doubleSpinBox_Position_C_3->setAcceptDrops(false);
         doubleSpinBox_Position_C_3->setAutoFillBackground(false);
@@ -5524,19 +5195,20 @@ public:
 
         verticalLayout_17 = new QVBoxLayout();
         verticalLayout_17->setObjectName(QString::fromUtf8("verticalLayout_17"));
-        verticalLayout_17->setContentsMargins(12, 12, -1, -1);
+        verticalLayout_17->setContentsMargins(0, 0, -1, -1);
         widget_55 = new QWidget(groupBox_7);
         widget_55->setObjectName(QString::fromUtf8("widget_55"));
         widget_55->setStyleSheet(QString::fromUtf8("border:none;\n"
 ""));
         horizontalLayout_66 = new QHBoxLayout(widget_55);
+        horizontalLayout_66->setSpacing(144);
         horizontalLayout_66->setObjectName(QString::fromUtf8("horizontalLayout_66"));
-        horizontalLayout_66->setContentsMargins(3, 3, 3, 3);
+        horizontalLayout_66->setContentsMargins(3, 0, 3, 0);
         label_67 = new QLabel(widget_55);
         label_67->setObjectName(QString::fromUtf8("label_67"));
         sizePolicy1.setHeightForWidth(label_67->sizePolicy().hasHeightForWidth());
         label_67->setSizePolicy(sizePolicy1);
-        label_67->setFont(font10);
+        label_67->setFont(font7);
         label_67->setStyleSheet(QString::fromUtf8("font:bold  \"Times New Roman\";    \n"
 "font-family:Microsoft Yahei;\n"
 "padding:6px;\n"
@@ -5593,7 +5265,7 @@ public:
         label_68->setObjectName(QString::fromUtf8("label_68"));
         sizePolicy1.setHeightForWidth(label_68->sizePolicy().hasHeightForWidth());
         label_68->setSizePolicy(sizePolicy1);
-        label_68->setFont(font10);
+        label_68->setFont(font7);
         label_68->setStyleSheet(QString::fromUtf8("font:bold  \"Times New Roman\";    \n"
 "font-family:Microsoft Yahei;\n"
 "padding:6px;\n"
@@ -5604,7 +5276,13 @@ public:
 
         comboBox_2 = new QComboBox(widget_56);
         comboBox_2->setObjectName(QString::fromUtf8("comboBox_2"));
-        comboBox_2->setFont(font11);
+        QFont font22;
+        font22.setFamily(QString::fromUtf8("24px"));
+        font22.setPointSize(16);
+        font22.setBold(false);
+        font22.setItalic(false);
+        font22.setWeight(50);
+        comboBox_2->setFont(font22);
         comboBox_2->setStyleSheet(QString::fromUtf8("border-radius:3px;\n"
 "border-width:2px;\n"
 "border-style:solid;\n"
@@ -5621,10 +5299,20 @@ public:
         verticalLayout_17->addWidget(widget_56);
 
         horizontalLayout_68 = new QHBoxLayout();
+        horizontalLayout_68->setSpacing(12);
         horizontalLayout_68->setObjectName(QString::fromUtf8("horizontalLayout_68"));
+        horizontalLayout_68->setContentsMargins(12, -1, 12, -1);
         Zero_All_2 = new QToolButton(groupBox_7);
         Zero_All_2->setObjectName(QString::fromUtf8("Zero_All_2"));
-        Zero_All_2->setFont(font12);
+        sizePolicy.setHeightForWidth(Zero_All_2->sizePolicy().hasHeightForWidth());
+        Zero_All_2->setSizePolicy(sizePolicy);
+        QFont font23;
+        font23.setFamily(QString::fromUtf8("Microsoft Yahei"));
+        font23.setPointSize(16);
+        font23.setBold(false);
+        font23.setItalic(false);
+        font23.setWeight(50);
+        Zero_All_2->setFont(font23);
         Zero_All_2->setStyleSheet(QString::fromUtf8("QToolButton\n"
 "{\n"
 "    font-family:Microsoft Yahei;\n"
@@ -5650,7 +5338,7 @@ public:
 "}\n"
 "border:none;"));
         Zero_All_2->setIcon(icon2);
-        Zero_All_2->setIconSize(QSize(60, 60));
+        Zero_All_2->setIconSize(QSize(50, 50));
         Zero_All_2->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
 
         horizontalLayout_68->addWidget(Zero_All_2);
@@ -5660,7 +5348,7 @@ public:
         toolButton_Submit_2->setEnabled(true);
         sizePolicy.setHeightForWidth(toolButton_Submit_2->sizePolicy().hasHeightForWidth());
         toolButton_Submit_2->setSizePolicy(sizePolicy);
-        toolButton_Submit_2->setFont(font12);
+        toolButton_Submit_2->setFont(font23);
         toolButton_Submit_2->setMouseTracking(false);
         toolButton_Submit_2->setTabletTracking(false);
         toolButton_Submit_2->setStyleSheet(QString::fromUtf8("QToolButton\n"
@@ -5688,7 +5376,7 @@ public:
 "}\n"
 "border:none;"));
         toolButton_Submit_2->setIcon(icon4);
-        toolButton_Submit_2->setIconSize(QSize(60, 60));
+        toolButton_Submit_2->setIconSize(QSize(50, 50));
         toolButton_Submit_2->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
 
         horizontalLayout_68->addWidget(toolButton_Submit_2);
@@ -5698,7 +5386,7 @@ public:
         sizePolicy.setHeightForWidth(toolButton_SuddenStop_2->sizePolicy().hasHeightForWidth());
         toolButton_SuddenStop_2->setSizePolicy(sizePolicy);
         toolButton_SuddenStop_2->setMinimumSize(QSize(120, 0));
-        toolButton_SuddenStop_2->setFont(font12);
+        toolButton_SuddenStop_2->setFont(font23);
         toolButton_SuddenStop_2->setMouseTracking(false);
         toolButton_SuddenStop_2->setTabletTracking(false);
         toolButton_SuddenStop_2->setStyleSheet(QString::fromUtf8("QToolButton\n"
@@ -5722,7 +5410,7 @@ public:
 "}\n"
 "border:none;"));
         toolButton_SuddenStop_2->setIcon(icon5);
-        toolButton_SuddenStop_2->setIconSize(QSize(60, 60));
+        toolButton_SuddenStop_2->setIconSize(QSize(50, 50));
         toolButton_SuddenStop_2->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
 
         horizontalLayout_68->addWidget(toolButton_SuddenStop_2);
@@ -5739,6 +5427,340 @@ public:
 
         horizontalLayout_48->addWidget(groupBox_7);
 
+
+        horizontalLayout_73->addWidget(groupBox_PositionControl_2);
+
+        widget_58 = new QWidget(widget_59);
+        widget_58->setObjectName(QString::fromUtf8("widget_58"));
+        verticalLayout_19 = new QVBoxLayout(widget_58);
+        verticalLayout_19->setSpacing(12);
+        verticalLayout_19->setObjectName(QString::fromUtf8("verticalLayout_19"));
+        verticalLayout_19->setContentsMargins(0, 0, 0, 0);
+        groupBox_Force_2 = new QGroupBox(widget_58);
+        groupBox_Force_2->setObjectName(QString::fromUtf8("groupBox_Force_2"));
+        groupBox_Force_2->setFont(font15);
+        groupBox_Force_2->setStyleSheet(QString::fromUtf8("border-radius:6px;\n"
+"border-width:2px;\n"
+"border-style:solid;\n"
+"border-color:white;\n"
+"background-color:#314659;\n"
+"color:white;"));
+        horizontalLayout_10 = new QHBoxLayout(groupBox_Force_2);
+        horizontalLayout_10->setSpacing(36);
+        horizontalLayout_10->setObjectName(QString::fromUtf8("horizontalLayout_10"));
+        horizontalLayout_10->setContentsMargins(24, 16, 24, 0);
+        toolButton_Sensor_Demarcate = new QToolButton(groupBox_Force_2);
+        toolButton_Sensor_Demarcate->setObjectName(QString::fromUtf8("toolButton_Sensor_Demarcate"));
+        QSizePolicy sizePolicy4(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
+        sizePolicy4.setHorizontalStretch(0);
+        sizePolicy4.setVerticalStretch(0);
+        sizePolicy4.setHeightForWidth(toolButton_Sensor_Demarcate->sizePolicy().hasHeightForWidth());
+        toolButton_Sensor_Demarcate->setSizePolicy(sizePolicy4);
+        QFont font24;
+        font24.setFamily(QString::fromUtf8("Microsoft Yahei"));
+        font24.setPointSize(20);
+        font24.setKerning(true);
+        toolButton_Sensor_Demarcate->setFont(font24);
+        toolButton_Sensor_Demarcate->setContextMenuPolicy(Qt::CustomContextMenu);
+        toolButton_Sensor_Demarcate->setAcceptDrops(false);
+        toolButton_Sensor_Demarcate->setLayoutDirection(Qt::LeftToRight);
+        toolButton_Sensor_Demarcate->setAutoFillBackground(false);
+        toolButton_Sensor_Demarcate->setStyleSheet(QString::fromUtf8("QToolButton\n"
+"{\n"
+"    font-family:Microsoft Yahei;\n"
+"    color:white;\n"
+"    background-color:rgb(14 , 150 , 254);\n"
+"    border-radius:20px;\n"
+"}\n"
+"\n"
+"QToolButton:hover\n"
+"{\n"
+"    background-color:rgb(44 , 137 , 255);\n"
+"}\n"
+"\n"
+"QToolButton:pressed\n"
+"{\n"
+"    background-color:rgb(14 , 135 , 228);\n"
+"    padding-left:3px;\n"
+"    padding-top:3px;\n"
+"}\n"
+"QToolButton:disabled\n"
+"{\n"
+"    background-color:grey;\n"
+"}\n"
+"border:none;"));
+        QIcon icon12;
+        icon12.addFile(QString::fromUtf8(":/icons/icons/Demarcate.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        toolButton_Sensor_Demarcate->setIcon(icon12);
+        toolButton_Sensor_Demarcate->setIconSize(QSize(50, 50));
+        toolButton_Sensor_Demarcate->setAutoRepeat(false);
+        toolButton_Sensor_Demarcate->setAutoExclusive(false);
+        toolButton_Sensor_Demarcate->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
+
+        horizontalLayout_10->addWidget(toolButton_Sensor_Demarcate, 0, Qt::AlignVCenter);
+
+        toolButton_Sensor_Calculate = new QToolButton(groupBox_Force_2);
+        toolButton_Sensor_Calculate->setObjectName(QString::fromUtf8("toolButton_Sensor_Calculate"));
+        toolButton_Sensor_Calculate->setEnabled(true);
+        sizePolicy4.setHeightForWidth(toolButton_Sensor_Calculate->sizePolicy().hasHeightForWidth());
+        toolButton_Sensor_Calculate->setSizePolicy(sizePolicy4);
+        toolButton_Sensor_Calculate->setFont(font24);
+        toolButton_Sensor_Calculate->setContextMenuPolicy(Qt::CustomContextMenu);
+        toolButton_Sensor_Calculate->setAcceptDrops(false);
+        toolButton_Sensor_Calculate->setLayoutDirection(Qt::LeftToRight);
+        toolButton_Sensor_Calculate->setAutoFillBackground(false);
+        toolButton_Sensor_Calculate->setStyleSheet(QString::fromUtf8("QToolButton\n"
+"{\n"
+"    font-family:Microsoft Yahei;\n"
+"    color:white;\n"
+"    background-color:rgb(14 , 150 , 254);\n"
+"    border-radius:20px;\n"
+"}\n"
+"\n"
+"QToolButton:hover\n"
+"{\n"
+"    background-color:rgb(44 , 137 , 255);\n"
+"}\n"
+"\n"
+"QToolButton:pressed\n"
+"{\n"
+"    background-color:rgb(14 , 135 , 228);\n"
+"    padding-left:3px;\n"
+"    padding-top:3px;\n"
+"}\n"
+"QToolButton:disabled\n"
+"{\n"
+"    background-color:grey;\n"
+"}\n"
+"border:none;"));
+        QIcon icon13;
+        icon13.addFile(QString::fromUtf8(":/icons/icons/calculation.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        toolButton_Sensor_Calculate->setIcon(icon13);
+        toolButton_Sensor_Calculate->setIconSize(QSize(50, 50));
+        toolButton_Sensor_Calculate->setAutoRepeat(false);
+        toolButton_Sensor_Calculate->setAutoExclusive(false);
+        toolButton_Sensor_Calculate->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
+
+        horizontalLayout_10->addWidget(toolButton_Sensor_Calculate, 0, Qt::AlignVCenter);
+
+        toolButton_Sensor_Compensate = new QToolButton(groupBox_Force_2);
+        toolButton_Sensor_Compensate->setObjectName(QString::fromUtf8("toolButton_Sensor_Compensate"));
+        sizePolicy4.setHeightForWidth(toolButton_Sensor_Compensate->sizePolicy().hasHeightForWidth());
+        toolButton_Sensor_Compensate->setSizePolicy(sizePolicy4);
+        QFont font25;
+        font25.setFamily(QString::fromUtf8("Microsoft Yahei"));
+        font25.setPointSize(20);
+        toolButton_Sensor_Compensate->setFont(font25);
+        toolButton_Sensor_Compensate->setContextMenuPolicy(Qt::CustomContextMenu);
+        toolButton_Sensor_Compensate->setLayoutDirection(Qt::LeftToRight);
+        toolButton_Sensor_Compensate->setStyleSheet(QString::fromUtf8("QToolButton\n"
+"{\n"
+"    font-family:Microsoft Yahei;\n"
+"    color:white;\n"
+"    background-color:rgb(14 , 150 , 254);\n"
+"    border-radius:20px;\n"
+"}\n"
+"\n"
+"QToolButton:hover\n"
+"{\n"
+"    background-color:rgb(44 , 137 , 255);\n"
+"}\n"
+"\n"
+"QToolButton:pressed\n"
+"{\n"
+"    background-color:rgb(14 , 135 , 228);\n"
+"    padding-left:3px;\n"
+"    padding-top:3px;\n"
+"}\n"
+"QToolButton:disabled\n"
+"{\n"
+"    background-color:grey;\n"
+"}\n"
+"border:none;"));
+        QIcon icon14;
+        icon14.addFile(QString::fromUtf8(":/icons/icons/Compensate.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        toolButton_Sensor_Compensate->setIcon(icon14);
+        toolButton_Sensor_Compensate->setIconSize(QSize(50, 50));
+        toolButton_Sensor_Compensate->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
+
+        horizontalLayout_10->addWidget(toolButton_Sensor_Compensate, 0, Qt::AlignVCenter);
+
+
+        verticalLayout_19->addWidget(groupBox_Force_2);
+
+        widget_57 = new QWidget(widget_58);
+        widget_57->setObjectName(QString::fromUtf8("widget_57"));
+        horizontalLayout_72 = new QHBoxLayout(widget_57);
+        horizontalLayout_72->setSpacing(12);
+        horizontalLayout_72->setObjectName(QString::fromUtf8("horizontalLayout_72"));
+        horizontalLayout_72->setContentsMargins(0, 0, 0, 0);
+        groupBox_Force_3 = new QGroupBox(widget_57);
+        groupBox_Force_3->setObjectName(QString::fromUtf8("groupBox_Force_3"));
+        groupBox_Force_3->setFont(font15);
+        groupBox_Force_3->setStyleSheet(QString::fromUtf8("border-radius:6px;\n"
+"border-width:2px;\n"
+"border-style:solid;\n"
+"border-color:white;\n"
+"background-color:#314659;\n"
+"color:white;"));
+        horizontalLayout_26 = new QHBoxLayout(groupBox_Force_3);
+        horizontalLayout_26->setSpacing(12);
+        horizontalLayout_26->setObjectName(QString::fromUtf8("horizontalLayout_26"));
+        horizontalLayout_26->setContentsMargins(24, 16, 24, 0);
+        toolButton_Sensor_Collect = new QToolButton(groupBox_Force_3);
+        toolButton_Sensor_Collect->setObjectName(QString::fromUtf8("toolButton_Sensor_Collect"));
+        toolButton_Sensor_Collect->setEnabled(true);
+        sizePolicy4.setHeightForWidth(toolButton_Sensor_Collect->sizePolicy().hasHeightForWidth());
+        toolButton_Sensor_Collect->setSizePolicy(sizePolicy4);
+        toolButton_Sensor_Collect->setFont(font24);
+        toolButton_Sensor_Collect->setContextMenuPolicy(Qt::CustomContextMenu);
+        toolButton_Sensor_Collect->setAcceptDrops(false);
+        toolButton_Sensor_Collect->setLayoutDirection(Qt::LeftToRight);
+        toolButton_Sensor_Collect->setAutoFillBackground(false);
+        toolButton_Sensor_Collect->setStyleSheet(QString::fromUtf8("QToolButton\n"
+"{\n"
+"    font-family:Microsoft Yahei;\n"
+"    color:white;\n"
+"    background-color:rgb(14 , 150 , 254);\n"
+"    border-radius:20px;\n"
+"}\n"
+"\n"
+"QToolButton:hover\n"
+"{\n"
+"    background-color:rgb(44 , 137 , 255);\n"
+"}\n"
+"\n"
+"QToolButton:pressed\n"
+"{\n"
+"    background-color:rgb(14 , 135 , 228);\n"
+"    padding-left:3px;\n"
+"    padding-top:3px;\n"
+"}\n"
+"QToolButton:disabled\n"
+"{\n"
+"    background-color:grey;\n"
+"}\n"
+"border:none;"));
+        toolButton_Sensor_Collect->setIcon(icon13);
+        toolButton_Sensor_Collect->setIconSize(QSize(50, 50));
+        toolButton_Sensor_Collect->setAutoRepeat(false);
+        toolButton_Sensor_Collect->setAutoExclusive(false);
+        toolButton_Sensor_Collect->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
+
+        horizontalLayout_26->addWidget(toolButton_Sensor_Collect, 0, Qt::AlignVCenter);
+
+
+        horizontalLayout_72->addWidget(groupBox_Force_3);
+
+        groupBox_Force_4 = new QGroupBox(widget_57);
+        groupBox_Force_4->setObjectName(QString::fromUtf8("groupBox_Force_4"));
+        groupBox_Force_4->setFont(font15);
+        groupBox_Force_4->setStyleSheet(QString::fromUtf8("border-radius:6px;\n"
+"border-width:2px;\n"
+"border-style:solid;\n"
+"border-color:white;\n"
+"background-color:#314659;\n"
+"color:white;"));
+        horizontalLayout_71 = new QHBoxLayout(groupBox_Force_4);
+        horizontalLayout_71->setSpacing(36);
+        horizontalLayout_71->setObjectName(QString::fromUtf8("horizontalLayout_71"));
+        horizontalLayout_71->setContentsMargins(12, 16, 24, 0);
+        toolButton_Camera_Start = new QToolButton(groupBox_Force_4);
+        toolButton_Camera_Start->setObjectName(QString::fromUtf8("toolButton_Camera_Start"));
+        sizePolicy3.setHeightForWidth(toolButton_Camera_Start->sizePolicy().hasHeightForWidth());
+        toolButton_Camera_Start->setSizePolicy(sizePolicy3);
+        QFont font26;
+        font26.setFamily(QString::fromUtf8("Microsoft Yahei"));
+        font26.setPointSize(20);
+        font26.setBold(false);
+        font26.setWeight(50);
+        toolButton_Camera_Start->setFont(font26);
+        toolButton_Camera_Start->setStyleSheet(QString::fromUtf8("QToolButton\n"
+"{\n"
+"    font-family:Microsoft Yahei;\n"
+"    color:white;\n"
+"    background-color:rgb(14 , 150 , 254);\n"
+"    border-radius:20px;\n"
+"}\n"
+"\n"
+"QToolButton:hover\n"
+"{\n"
+"    background-color:rgb(44 , 137 , 255);\n"
+"}\n"
+"\n"
+"QToolButton:pressed\n"
+"{\n"
+"    background-color:rgb(14 , 135 , 228);\n"
+"    padding-left:3px;\n"
+"    padding-top:3px;\n"
+"}\n"
+"QToolButton:disabled\n"
+"{\n"
+"    background-color:grey;\n"
+"}\n"
+"border:none;"));
+        toolButton_Camera_Start->setIcon(icon6);
+        toolButton_Camera_Start->setIconSize(QSize(50, 50));
+        toolButton_Camera_Start->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
+
+        horizontalLayout_71->addWidget(toolButton_Camera_Start);
+
+        toolButton_Sensor_Monitor = new QToolButton(groupBox_Force_4);
+        toolButton_Sensor_Monitor->setObjectName(QString::fromUtf8("toolButton_Sensor_Monitor"));
+        sizePolicy3.setHeightForWidth(toolButton_Sensor_Monitor->sizePolicy().hasHeightForWidth());
+        toolButton_Sensor_Monitor->setSizePolicy(sizePolicy3);
+        toolButton_Sensor_Monitor->setFont(font26);
+        toolButton_Sensor_Monitor->setContextMenuPolicy(Qt::DefaultContextMenu);
+        toolButton_Sensor_Monitor->setLayoutDirection(Qt::LeftToRight);
+        toolButton_Sensor_Monitor->setStyleSheet(QString::fromUtf8("QToolButton\n"
+"{\n"
+"    font-family:Microsoft Yahei;\n"
+"    color:white;\n"
+"    background-color:rgb(14 , 150 , 254);\n"
+"    border-radius:20px;\n"
+"}\n"
+"\n"
+"QToolButton:hover\n"
+"{\n"
+"    background-color:rgb(44 , 137 , 255);\n"
+"}\n"
+"\n"
+"QToolButton:pressed\n"
+"{\n"
+"    background-color:rgb(14 , 135 , 228);\n"
+"    padding-left:3px;\n"
+"    padding-top:3px;\n"
+"}\n"
+"QToolButton:disabled\n"
+"{\n"
+"    background-color:grey;\n"
+"}\n"
+"border:none;"));
+        toolButton_Sensor_Monitor->setIcon(icon6);
+        toolButton_Sensor_Monitor->setIconSize(QSize(50, 50));
+        toolButton_Sensor_Monitor->setAutoRepeat(false);
+        toolButton_Sensor_Monitor->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
+
+        horizontalLayout_71->addWidget(toolButton_Sensor_Monitor);
+
+        horizontalLayout_71->setStretch(0, 1);
+        horizontalLayout_71->setStretch(1, 1);
+
+        horizontalLayout_72->addWidget(groupBox_Force_4);
+
+        horizontalLayout_72->setStretch(0, 1);
+        horizontalLayout_72->setStretch(1, 2);
+
+        verticalLayout_19->addWidget(widget_57);
+
+
+        horizontalLayout_73->addWidget(widget_58);
+
+
+        verticalLayout_22->addWidget(widget_59);
+
+        verticalLayout_22->setStretch(0, 2);
+        verticalLayout_22->setStretch(1, 1);
         tabWidget->addTab(tab_main, QString());
 
         verticalLayout->addWidget(tabWidget);
@@ -5779,7 +5801,7 @@ public:
         doubleSpinBox_Position_X_2 = new QDoubleSpinBox(widget_5);
         doubleSpinBox_Position_X_2->setObjectName(QString::fromUtf8("doubleSpinBox_Position_X_2"));
         doubleSpinBox_Position_X_2->setEnabled(false);
-        doubleSpinBox_Position_X_2->setFont(font9);
+        doubleSpinBox_Position_X_2->setFont(font8);
         doubleSpinBox_Position_X_2->setContextMenuPolicy(Qt::DefaultContextMenu);
         doubleSpinBox_Position_X_2->setAcceptDrops(false);
         doubleSpinBox_Position_X_2->setAutoFillBackground(false);
@@ -5831,7 +5853,7 @@ public:
         doubleSpinBox_Position_Y_2 = new QDoubleSpinBox(widget_8);
         doubleSpinBox_Position_Y_2->setObjectName(QString::fromUtf8("doubleSpinBox_Position_Y_2"));
         doubleSpinBox_Position_Y_2->setEnabled(false);
-        doubleSpinBox_Position_Y_2->setFont(font9);
+        doubleSpinBox_Position_Y_2->setFont(font8);
         doubleSpinBox_Position_Y_2->setContextMenuPolicy(Qt::DefaultContextMenu);
         doubleSpinBox_Position_Y_2->setAcceptDrops(false);
         doubleSpinBox_Position_Y_2->setAutoFillBackground(false);
@@ -5883,7 +5905,7 @@ public:
         doubleSpinBox_Position_Z_2 = new QDoubleSpinBox(widget_30);
         doubleSpinBox_Position_Z_2->setObjectName(QString::fromUtf8("doubleSpinBox_Position_Z_2"));
         doubleSpinBox_Position_Z_2->setEnabled(false);
-        doubleSpinBox_Position_Z_2->setFont(font9);
+        doubleSpinBox_Position_Z_2->setFont(font8);
         doubleSpinBox_Position_Z_2->setContextMenuPolicy(Qt::DefaultContextMenu);
         doubleSpinBox_Position_Z_2->setAcceptDrops(false);
         doubleSpinBox_Position_Z_2->setAutoFillBackground(false);
@@ -5935,7 +5957,7 @@ public:
         doubleSpinBox_Position_A_2 = new QDoubleSpinBox(widget_31);
         doubleSpinBox_Position_A_2->setObjectName(QString::fromUtf8("doubleSpinBox_Position_A_2"));
         doubleSpinBox_Position_A_2->setEnabled(false);
-        doubleSpinBox_Position_A_2->setFont(font9);
+        doubleSpinBox_Position_A_2->setFont(font8);
         doubleSpinBox_Position_A_2->setContextMenuPolicy(Qt::DefaultContextMenu);
         doubleSpinBox_Position_A_2->setAcceptDrops(false);
         doubleSpinBox_Position_A_2->setAutoFillBackground(false);
@@ -5987,7 +6009,7 @@ public:
         doubleSpinBox_Position_B_2 = new QDoubleSpinBox(widget_39);
         doubleSpinBox_Position_B_2->setObjectName(QString::fromUtf8("doubleSpinBox_Position_B_2"));
         doubleSpinBox_Position_B_2->setEnabled(false);
-        doubleSpinBox_Position_B_2->setFont(font9);
+        doubleSpinBox_Position_B_2->setFont(font8);
         doubleSpinBox_Position_B_2->setContextMenuPolicy(Qt::DefaultContextMenu);
         doubleSpinBox_Position_B_2->setAcceptDrops(false);
         doubleSpinBox_Position_B_2->setAutoFillBackground(false);
@@ -6039,7 +6061,7 @@ public:
         doubleSpinBox_Position_C_2 = new QDoubleSpinBox(widget_40);
         doubleSpinBox_Position_C_2->setObjectName(QString::fromUtf8("doubleSpinBox_Position_C_2"));
         doubleSpinBox_Position_C_2->setEnabled(false);
-        doubleSpinBox_Position_C_2->setFont(font9);
+        doubleSpinBox_Position_C_2->setFont(font8);
         doubleSpinBox_Position_C_2->setContextMenuPolicy(Qt::DefaultContextMenu);
         doubleSpinBox_Position_C_2->setAcceptDrops(false);
         doubleSpinBox_Position_C_2->setAutoFillBackground(false);
@@ -6083,8 +6105,8 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(1);
-        tabWidget_2->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
+        tabWidget_2->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -6199,13 +6221,8 @@ public:
         toolButton_PLC_IO->setText(QString());
         tabWidget_2->setTabText(tabWidget_2->indexOf(tabWidget_Settings), QCoreApplication::translate("MainWindow", "\350\277\236\346\216\245\344\270\216\346\265\213\350\257\225", nullptr));
         groupBox_9->setTitle(QString());
-        picture->setText(QCoreApplication::translate("MainWindow", "\346\262\241\346\234\211\344\277\241\345\217\267", nullptr));
         CameraShot->setText(QCoreApplication::translate("MainWindow", "\345\220\257\n"
 "\345\212\250", nullptr));
-        Zoom_in->setText(QCoreApplication::translate("MainWindow", "\346\224\276\n"
-"\345\244\247", nullptr));
-        Zoom_out->setText(QCoreApplication::translate("MainWindow", "\347\274\251\n"
-"\345\260\217", nullptr));
         toolButton_Camera_Shot->setText(QCoreApplication::translate("MainWindow", "\346\213\215\n"
 "\347\205\247", nullptr));
         toolButton_Settings->setText(QCoreApplication::translate("MainWindow", "\350\256\276\n"
@@ -6223,7 +6240,6 @@ public:
         tabWidget_2->setTabText(tabWidget_2->indexOf(tab_point_setting), QCoreApplication::translate("MainWindow", "\346\240\207\345\256\232\347\202\271\351\205\215\347\275\256", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_test), QCoreApplication::translate("MainWindow", " \351\205\215\347\275\256\344\270\216\350\260\203\350\257\225", nullptr));
         groupBox_8->setTitle(QCoreApplication::translate("MainWindow", "\346\234\253\347\253\257\347\233\270\346\234\272\347\233\221\346\265\213", nullptr));
-        CameraWidget->setText(QCoreApplication::translate("MainWindow", "\346\227\240\344\277\241\345\217\267", nullptr));
         groupBox_5->setTitle(QCoreApplication::translate("MainWindow", "\345\212\233\344\274\240\346\204\237\346\225\260\346\215\256\347\233\221\346\265\213", nullptr));
         checkBox_X->setText(QCoreApplication::translate("MainWindow", "X", nullptr));
         checkBox_Y->setText(QCoreApplication::translate("MainWindow", "Y", nullptr));
@@ -6243,18 +6259,7 @@ public:
         label_27->setText(QCoreApplication::translate("MainWindow", "N\302\267m", nullptr));
         label_22->setText(QCoreApplication::translate("MainWindow", "C:", nullptr));
         label_28->setText(QCoreApplication::translate("MainWindow", "N\302\267m", nullptr));
-        groupBox_Force_2->setTitle(QCoreApplication::translate("MainWindow", "\350\257\257\345\267\256\350\241\245\345\201\277", nullptr));
-        toolButton_Sensor_Demarcate->setText(QCoreApplication::translate("MainWindow", "\346\240\207\345\256\232", nullptr));
-        toolButton_Sensor_Calculate->setText(QCoreApplication::translate("MainWindow", "\350\256\241\347\256\227", nullptr));
-        toolButton_Sensor_Compensate->setText(QCoreApplication::translate("MainWindow", "\350\241\245\345\201\277", nullptr));
-        groupBox_Force_4->setTitle(QCoreApplication::translate("MainWindow", " \346\211\213\345\212\250 \347\233\221\346\265\213", nullptr));
-        toolButton_Sensor_Monitor->setText(QCoreApplication::translate("MainWindow", "\347\233\270\346\234\272\n"
-"\347\233\221\346\265\213", nullptr));
-        toolButton_Camera_Start->setText(QCoreApplication::translate("MainWindow", "\345\212\233\344\274\240\n"
-"\347\233\221\346\265\213", nullptr));
-        groupBox_Force_3->setTitle(QCoreApplication::translate("MainWindow", "\346\225\260\346\215\256\351\207\207\351\233\206", nullptr));
-        toolButton_Sensor_Calculate_2->setText(QCoreApplication::translate("MainWindow", " \345\220\257\345\212\250", nullptr));
-        groupBox_PositionControl_2->setTitle(QCoreApplication::translate("MainWindow", " \346\234\272\345\231\250\344\272\272\346\216\247\345\210\266\346\265\213\350\257\225", nullptr));
+        groupBox_PositionControl_2->setTitle(QCoreApplication::translate("MainWindow", " \346\234\272\345\231\250\344\272\272\344\275\215\345\247\277\346\216\247\345\210\266", nullptr));
         groupBox_7->setTitle(QString());
         label_53->setText(QCoreApplication::translate("MainWindow", "X\357\274\232", nullptr));
         label_54->setText(QCoreApplication::translate("MainWindow", "mm", nullptr));
@@ -6291,8 +6296,17 @@ public:
         label_68->setText(QCoreApplication::translate("MainWindow", "\345\200\215\347\216\207\357\274\232", nullptr));
         comboBox_2->setPlaceholderText(QString());
         Zero_All_2->setText(QCoreApplication::translate("MainWindow", "\345\275\222\351\233\266", nullptr));
-        toolButton_Submit_2->setText(QCoreApplication::translate("MainWindow", " \346\211\247\350\241\214", nullptr));
-        toolButton_SuddenStop_2->setText(QCoreApplication::translate("MainWindow", " \346\200\245\345\201\234", nullptr));
+        toolButton_Submit_2->setText(QCoreApplication::translate("MainWindow", "\346\211\247\350\241\214", nullptr));
+        toolButton_SuddenStop_2->setText(QCoreApplication::translate("MainWindow", "\346\200\245\345\201\234", nullptr));
+        groupBox_Force_2->setTitle(QCoreApplication::translate("MainWindow", "\350\257\257\345\267\256\350\241\245\345\201\277", nullptr));
+        toolButton_Sensor_Demarcate->setText(QCoreApplication::translate("MainWindow", "\346\240\207\345\256\232", nullptr));
+        toolButton_Sensor_Calculate->setText(QCoreApplication::translate("MainWindow", "\350\256\241\347\256\227", nullptr));
+        toolButton_Sensor_Compensate->setText(QCoreApplication::translate("MainWindow", "\350\241\245\345\201\277", nullptr));
+        groupBox_Force_3->setTitle(QCoreApplication::translate("MainWindow", "\346\225\260\346\215\256\351\207\207\351\233\206", nullptr));
+        toolButton_Sensor_Collect->setText(QCoreApplication::translate("MainWindow", " \345\220\257\345\212\250", nullptr));
+        groupBox_Force_4->setTitle(QCoreApplication::translate("MainWindow", " \346\211\213\345\212\250\347\233\221\346\265\213", nullptr));
+        toolButton_Camera_Start->setText(QCoreApplication::translate("MainWindow", "\347\233\270\346\234\272", nullptr));
+        toolButton_Sensor_Monitor->setText(QCoreApplication::translate("MainWindow", "\345\212\233\344\274\240", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_main), QCoreApplication::translate("MainWindow", "\350\257\257\345\267\256\350\241\245\345\201\277\344\270\216\350\243\205\351\205\215\347\233\221\346\265\213", nullptr));
         label_56->setText(QCoreApplication::translate("MainWindow", "\346\234\272\345\231\250\344\272\272\345\275\223\345\211\215\344\275\215\345\247\277    ", nullptr));
         label_29->setText(QCoreApplication::translate("MainWindow", "X\357\274\232", nullptr));

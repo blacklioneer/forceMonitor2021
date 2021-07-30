@@ -1,5 +1,4 @@
-﻿void on_toolButton_PLC_IO_clicked();
-#ifndef MAINWINDOW_H
+﻿#ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
 #include <QMainWindow>
@@ -9,6 +8,7 @@
 #include<QtCharts\QSplineSeries>   //两个基本模块
 #include<QSettings>
 #include<QTreeView>
+#include <QStandardItemModel>
 //#include <QChart>
 //#include <QtCharts>                   //添加命名空间
 //using namespace QtCharts;   //QT_CHARTS_USE_NAMESPACE 需要在ui_xxx.h前面，因为ui_xxx.h也需要该宏
@@ -16,14 +16,12 @@
 #include "../PLC/ModbusTCP.h"
 #include "../Robot/RobotCtrl.h"
 #include "sensor.h"
-#include "orientationdialog.h"
-#include "quickchangecontrol.h"
-#include "connectsettings.h"
 #include "camerathread.h" //相机线程
 #include "hikvisonsdk.h"    //海康相机模块集成
 #include "forceget.h"
 #include "losscaculation.h"
 #include "addpoint.h"
+#include "camerasetting.h"
 
 using namespace QtCharts;
 QT_BEGIN_NAMESPACE
@@ -199,11 +197,8 @@ private slots:
 
     void on_CameraShot_clicked();
 
-    void on_Zoom_in_clicked();
-
-    void on_Zoom_out_clicked();
-
     void on_caculate_clicked();
+    /** 标定点操作程序 */
 
     void on_point_Remove_clicked();
 
@@ -212,6 +207,10 @@ private slots:
     void on_point_Change_clicked();
 
     void on_comboBox_2_currentTextChanged(const QString &arg1);
+
+    void on_toolButton_Settings_clicked();
+
+    void on_toolButton_Sensor_Collect_clicked();
 
 private:
     bool camera_Clicked = false; /*相机是否点选,false 表示未开启，true表示开启*/
@@ -232,13 +231,15 @@ private:
     bool QIO = false; /*其他IO口， false为拆 true为装*/
     bool Point_Move = false; /*机器人点动控制设定*/
     bool getpoint = false; /*判定是否传输了点*/
+    bool shotclicked =false;/*判定是p拍照*/
     Ui::MainWindow *ui;
-    ConnectSettings *connectsettings;/*集成连接设置窗口*/
-    OrientationDialog *orientationdialog; /*相机标定窗口*/
-    QuickChangeControl *quickchangecontrol; /*快换控制窗口*/
+//    ConnectSettings *connectsettings;/*集成连接设置窗口*/
+//    OrientationDialog *orientationdialog; /*相机标定窗口*/
+//    QuickChangeControl *quickchangecontrol; /*快换控制窗口*/
     ForceGet *forcegetdialog; /** 周边力采集窗口*/
-    LossCaculation *losscaculation;
-    AddPoint *addpoint;
+    LossCaculation *losscaculation; /** 误差计算弹出窗口*/
+    AddPoint *addpoint; /** 标定点添加修改窗口*/
+    CameraSetting *camerasetting; /** 相机配置窗口*/
     //用于显示单张图像
     void display(const Mat* image);
     //相机指针

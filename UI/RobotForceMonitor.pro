@@ -24,8 +24,8 @@ SOURCES += \
     ../PLC/ModbusTCP.cpp \
     ../Robot/RobotCtrl.cpp \
     addpoint.cpp \
+    camerasetting.cpp \
     camerathread.cpp \
-    connectsettings.cpp \
     forceget.cpp \
     hikvisonsdk.cpp \
     losscaculation.cpp \
@@ -33,6 +33,8 @@ SOURCES += \
     mainwindow.cpp \
     mvcameras.cpp \
     orientationdialog.cpp \
+    qpaintmainwidget.cpp \
+    qpaintswidget.cpp \
     quickchangecontrol.cpp \
     sensor.cpp \
     variables.cpp
@@ -43,21 +45,23 @@ HEADERS += \
     ../PLC/ModbusTCP.h \
     ../Robot/RobotCtrl.h \
     addpoint.h \
+    camerasetting.h \
     camerathread.h \
-    connectsettings.h \
     forceget.h \
     hikvisonsdk.h \
     losscaculation.h \
     mainwindow.h \
     mvcameras.h \
     orientationdialog.h \
+    qpaintmainwidget.h \
+    qpaintswidget.h \
     quickchangecontrol.h \
     sensor.h \
     variables.h
 
 FORMS += \
     addpoint.ui \
-    connectsettings.ui \
+    camerasetting.ui \
     forceget.ui \
     losscaculation.ui \
     mainwindow.ui \

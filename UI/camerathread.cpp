@@ -40,10 +40,12 @@ void CameraThread::run()
 
     while(status)
     {
-        std::cout<<"Thread_Trigger:"<<cameraPtr->softTrigger()<<std::endl;
-        std::cout<<"Thread_Readbuffer:"<<cameraPtr->ReadBuffer(*imagePtr)<<std::endl;
+//        std::cout<<"Thread_Trigger:"<<cameraPtr->softTrigger()<<std::endl;
+//        std::cout<<"Thread_Readbuffer:"<<cameraPtr->ReadBuffer(*imagePtr)<<std::endl;
+        cameraPtr->softTrigger();
+        cameraPtr->ReadBuffer(*imagePtr);
         emit mess();
-        msleep(50);
+        msleep(20);
     }
 }
 
